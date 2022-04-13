@@ -14,17 +14,17 @@ The Enzyme Council has a Chair and Vice Chair which rotate bi-annually. Their re
 
 **Who sits on the Enzyme Council today?**
 
+* **Chain Security (ETC)**
+* **Exa:** Co-founder of Exponent (ETC)
 * **Janos Berghorn:** Investor @ KR1 (ETC)
 * **Giel Detienne**: User representative (EUR)
 * **Mona El Isa**: Founder & CEO @ Avantgarde Finance (ETC)
 * **Felix Hartmann**: Founder @ Hartmann Capital & User (EUR)
-* **Fabian Gompf**: VP @ Parity Technnologies (ETC)
 * **Will Harborne**: Founder & CEO @ Deversifi (ETC)
-* **Lev Livnev**: Formal verification researcher @ dapp.org and a founding partner @ Symbolic Capital Partners (ETC)
-* **Martin Lundfall**: Formal Verification Researcher @ Ethereum Foundation & DappHub (ETC)
 * **Nick Munoz-McDonald**: Smart Contract Auditor & Researcher @ G0 Group (ETC)
 * **Paul Salisbury**: Founder @ Blockchain Labs (ETC)
 * **Zahreddine Touag:** Founder @ Woorton (ETC)
+* **Theophille Villard**: Co-founder of Multis wallet, contributor to Enzyme codebase (ETC).
 
 #### **Incentive Structure**
 
