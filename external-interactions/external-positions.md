@@ -55,6 +55,30 @@ Mainnet contracts:
 * `RepayBorrow` - None
 * `ClaimComp` - None
 
+### MapleLiquidityPosition
+
+Handles lending on Maple Finance.
+
+Docs: [https://maplefinance.gitbook.io/maple/](https://maplefinance.gitbook.io/maple/)
+
+Mainnet contracts:
+
+* each Maple pool
+* `MplRewardsFactory`: `0x0155729EbCd47Cb1fBa02bF5a8DA20FaF3860535`
+* `PoolFactory` : `0x2Cd79F7f8b38B9c0D80EA6B230441841A31537eC`&#x20;
+
+Actions and considerations:
+
+* `Lend` - None
+* `LendAndStake` - Starts accrual of MPL rewards
+* `IntendToRedeem` - None
+* `Redeem` - Also claims all interest due
+* `Stake` - Starts accrual of MPL rewards
+* `Unstake` - Stops accrual of MPL rewards for the amount unstaked
+* `UnstakeAndRedeem` - Stops accrual of MPL rewards for the amount unstaked
+* `ClaimInterest` - None
+* `ClaimRewards` - None
+
 ### UniswapV3LiquidityPosition
 
 Handles minting, adding/removing liquidity, collecting fees, and burning UniswapV3 LP positions via Uniswap's `NonfungiblePositionManager`.
