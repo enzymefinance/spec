@@ -55,6 +55,52 @@ Mainnet contracts:
 * `RepayBorrow` - None
 * `ClaimComp` - None
 
+### ConvexVotingPosition
+
+Handles vote-locking CVX for vlCVX, delegating voting power to a 3rd party, and claiming rewards from Convex and Votium.
+
+Does not currently support actually voting, which can be easily be accomplished by delegating to a 3rd party and voting directly via Snapshot.
+
+Note that this uses `CvxLockerV2`, the second locker implementation.
+
+Docs: [https://docs.convexfinance.com/convexfinance/](https://docs.convexfinance.com/convexfinance/)
+
+Mainnet contracts:
+
+* `BaseRewardPool` (cvxCrv staking) :  `0x3Fe65692bfCD0e6CF84cB1E7d24108E434A7587e`
+* `ConvexToken` : `0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B`
+* `CvxLockerV2`: `0x72a19342e8F1838460eBFCCEf09F6585e32db86E`
+* `MultiMerkleStash` (Votium): `0x378Ba9B73309bE80BF4C2c027aAD799766a7ED5A`
+* `vlCvxExtraRewardDistribution`: `0x9B622f2c40b80EF5efb14c2B2239511FfBFaB702`
+
+Actions and considerations:
+
+* `Lock` - Starts accrual of cvxCRV rewards and any extra rewards
+* `Relock` - None
+* `Withdraw` - Stops accrual of cvxCRV rewards and any extra rewards
+* `ClaimRewards` - None
+* `Delegate` - None
+
+### LiquityDebtPosition
+
+Handles borrowing LUSD using ETH as collateral on Liquity.
+
+Docs: [https://docs.liquity.org/](https://docs.liquity.org)
+
+Mainnet contracts:
+
+* `BorrowerOperations`: `0x24179CD81c9e782A4096035f7eC97fB8B783e007`
+* `TroveManager` : `0xA39739EF8b0231DbFA0DcdA07d7e29faAbCf4bb2`
+
+Actions and considerations:
+
+* `OpenTrove` - None
+* `AddCollateral` - None
+* `RemoveCollateral` - None
+* `Borrow` - None
+* `RepayBorrow` - None
+* `CloseTrove` - None
+
 ### MapleLiquidityPosition
 
 Handles lending on Maple Finance.
@@ -78,6 +124,22 @@ Actions and considerations:
 * `UnstakeAndRedeem` - Stops accrual of MPL rewards for the amount unstaked
 * `ClaimInterest` - None
 * `ClaimRewards` - None
+
+### TheGraphDelegationPosition
+
+Handles delegating $GRT to indexers on The Graph.
+
+Docs: [https://thegraph.com/docs/en/](https://thegraph.com/docs/en/)
+
+Mainnet contracts:
+
+* `GraphProxy`: `0xf55041e37e12cd407ad00ce2910b8269b01263b9`
+
+Actions and considerations:
+
+* `Delegate` - Starts accruing $GRT rewards, and charges a flat delegation tax (currently 0.5%) on the delegated $GRT amount&#x20;
+* `Undelegate` - Stops accruing $GRT rewards
+* `Withdraw` - None
 
 ### UniswapV3LiquidityPosition
 
