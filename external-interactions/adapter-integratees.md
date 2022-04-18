@@ -97,6 +97,8 @@ Claiming accrued rewards can also be accomplished outside of the adapter through
 * $CRV - must be claimed either through a call from the `VaultProxy` or by an account nominated via a call from the `VaultProxy` . We register all of these as approved vault calls.
 * pool rewards - can be claimed by any party at any time on behalf of the `VaultProxy`
 
+Note on sidechains/L2s: earned $CRV is not paid via a `Minter` , but rather via the pool rewards mechanism described above.
+
 ## FuseAdapter
 
 Integrates with Fuse fTokens. Each fToken is its own integratee.
