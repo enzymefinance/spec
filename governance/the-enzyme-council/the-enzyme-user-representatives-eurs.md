@@ -24,3 +24,5 @@ The EUR's are expected to meet bi-monthly too; once with the ETC and once indepe
 * **User feedback**: Collating and gathering feedback from users in the ecosystem to integrate into the Council strategy & roadmap.
 * **Growth**: Helping grow the user base and protect their best interest.
 * **Monitoring**: Oversee and check that user's best interests are being correctly represented and prioritised by the ETC.
+
+**IMPORTANT**: Pls note that the next round of EUR nominations will be taking place soon. If you'd like to nominate yourself or take part in the voting, read this [blog post](https://medium.com/enzymefinance/enzyme-user-representative-eur-elections-coming-up-5de2abf919a7) to find out more and [stay tuned](https://twitter.com/enzymefinance) for more updates.
