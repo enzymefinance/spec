@@ -1,12 +1,12 @@
 # Performance Fee
 
-Performanc Fee for pre-Sulu releases knows the concept of “Crystallisation Period”. While this concept is important in traditional finance, it is also complicated and gas-expensive to properly implement on-chain.
+Performance Fees for pre-Sulu releases include the concept of a “crystallisation period”. While this concept is important in traditional finance, it is also complicated and gas-expensive to properly implement on-chain.
 
 By removing the concept of “crystallisation period”, we can greatly simplify the implementation of the performance fee in the protocol.
 
 This also implies that performance fee can be claimed at any time.&#x20;
 
-Without "crystallisation period" the manager can potentially earn more performance fee through continuous accrual instead of quarterly or yearly accrual. Managers should therefore set the rate for the new simplified performance fee lower than the rate of the previously used performance fee.
+Without a "crystallisation period" the manager can potentially earn more performance fees through continuous accrual instead of quarterly or yearly accrual. Managers should therefore set the rate for the new simplified performance fee lower than the rate of the previously used performance fee.
 
 ### Principles
 
