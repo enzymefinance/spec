@@ -6,7 +6,7 @@ Just as adapters and external positions interact with external "integratees," so
 
 Prices Aave `aTokens` , which are pegged 1:1 with the value of their underlying, e.g., 1 `aAAVE` is equal to 1 `AAVE` . `aTokens` accrue interest via a formulaic rebasing mechanism.
 
-Docs: [https://docs.aave.com/](https://docs.aave.com)
+Docs: [https://docs.aave.com/](https://docs.aave.com/)
 
 Mainnet contracts:
 
@@ -18,7 +18,7 @@ Considerations: Always directly returns the input amount as the output amount (i
 
 Each rate pair (we use those quoted in either USD or ETH) is provided by a Chainlink "aggregator," and we interact with the proxy contracts for those aggregators.
 
-Docs: [https://docs.chain.link/](https://docs.chain.link)
+Docs: [https://docs.chain.link/](https://docs.chain.link/)
 
 Mainnet contracts: each aggregator
 
@@ -62,6 +62,20 @@ Since an arbitrary asset is chosen for the single underlying asset returned by t
 * Assets that temporarily lose their peg will generally lose it in the downward direction, which would cause the redeemable value of an LP token to be less than its virtual price-derived Enzyme value. This condition is not susceptible to investor-side arbitrage in Enzyme funds, where the concern is preventing the purchase of discounted shares (whereas using the virtual price results in temporarily inflated share price). Further, as long as the loss of peg is assumed to be temporary, using the virtual price rather than this ephemeral imbalance protects the fund from discounted shares.
 * In the more extreme case of permanent loss of peg, Curve only works if all pooled assets generally hold their peg to the invariant. If any one asset were to permanently lose its peg to the invariant, the redeemable value of the LP token itself would capitulate, as arbitragers drain the pool of all but the fallen asset.
 
+## FiduPriceFeed
+
+Provides a value for Goldfinch's FIDU token.
+
+Docs: [https://docs.goldfinch.finance/goldfinch/](https://docs.goldfinch.finance/goldfinch/)
+
+Mainnet contracts:
+
+* FIDU token: `0x6a445E9F40e0b97c92d0b8a3366cEF1d67F700BF`
+
+Considerations:
+
+Goldfinch's withdrawal fee is included in the calculations.
+
 ## FusePriceFeed
 
 Queries each Fuse Token (fToken) directly for its rate.
@@ -78,7 +92,7 @@ We query the cached rate instead of the live rate for gas savings. fTokens rates
 
 Provides a value for each `IdleToken` to its underlying asset.
 
-Docs: [https://developers.idle.finance/](https://developers.idle.finance)
+Docs: [https://developers.idle.finance/](https://developers.idle.finance/)
 
 Mainnet contracts: each `IdleToken`
 
@@ -88,7 +102,7 @@ Considerations: Does not take into account user-specific fees (i.e., relative to
 
 Prices PoolTogether `ptTokens` , which are pegged 1:1 with the value of their underlying, e.g., 1 `ptUSDC` is equal to 1 `USDC` .
 
-Docs: [https://v4.docs.pooltogether.com/](https://v4.docs.pooltogether.com)
+Docs: [https://v4.docs.pooltogether.com/](https://v4.docs.pooltogether.com/)
 
 Mainnet contracts:
 
@@ -112,7 +126,7 @@ Note that reverting fees are skipped during shares redemption, which would affec
 
 Uses a special pool manipulation-resistant formula that takes into consideration the current underlying asset balances and pool token balance in the given Uniswap pool (`UniswapV2Pair`) along with a trusted rate between the two underlying tokens.
 
-Docs: [https://docs.uniswap.org/](https://docs.uniswap.org)
+Docs: [https://docs.uniswap.org/](https://docs.uniswap.org/)
 
 Mainnet contracts:
 
@@ -129,7 +143,7 @@ Considerations: Live prices
 
 Provides a value for each `yVault` (Yearn vault v2) in terms of its underlying asset
 
-Docs: [https://docs.yearn.finance/](https://docs.yearn.finance)
+Docs: [https://docs.yearn.finance/](https://docs.yearn.finance/)
 
 Mainnet contracts:
 
