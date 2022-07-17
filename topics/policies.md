@@ -62,6 +62,14 @@ These policies limit fund manager actions that might be used to drain, hide valu
 * Description: Limits the `IntegrationManager` adapters that can be used
 * Intended purpose: Prevent fund managers from using arbitrary adapters. Most funds should elect to use the Council-maintained list of known adapters.
 
+### AllowedAdaptersPerManagerPolicy
+
+* Hook: `PostCallOnIntegration`
+* Disableable: Yes
+* Updatable: Yes
+* Description: Limits the `IntegrationManager` adapters that can be used, per manager
+* Intended purpose: Limit the adapters that each asset manager can use (the owner can use any). Intended for cases where the any asset manager is not fully trusted by the owner.
+
 ### AllowedExternalPositionTypesPolicy
 
 * Hooks:
@@ -75,6 +83,18 @@ These policies limit fund manager actions that might be used to drain, hide valu
 E.g., No external positions are allowed
 
 E.g., Only Compound CDPs are allowed
+
+### AllowedExternalPositionTypePerManagerPolicy
+
+* Hooks:
+  * `CreateExternalPosition`
+  * `PostCallOnExternalPosition`
+  * `ReactivateExternalPosition`
+  * `RemoveExternalPosition`
+* Disableable: Yes
+* Updatable: Yes
+* Description: Limits the external position "types" (e.g., Compound CDP) that can be used, per manager
+* Intended purpose: Limit the external position types that each asset manager can use (the owner can use any). Intended for cases where the any asset manager is not fully trusted by the owner.
 
 ### CumulativeSlippageTolerancePolicy
 
