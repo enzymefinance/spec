@@ -60,4 +60,4 @@ $$f = (1+k)^{1/N}$$
 
 `f` is calculated off-chain when configuring the fee, and it is stored on-chain as `scaledPerSecondRate` . The on-chain computation is then
 
-`sharesDue = (rpow(scaledPerSecondRate, numberOfSeconds, 10*27) - 10**27) * totalSupply / 10**27`
+`sharesDue = (rpow(scaledPerSecondRate, numberOfSeconds, 10**27) - 10**27) * totalSupply / 10**27`
