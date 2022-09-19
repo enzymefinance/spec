@@ -15,9 +15,8 @@ Without a "crystallisation period" the manager can potentially earn more perform
   * redeem shares
   * claim fees
 * Performance fee is only paid if the share price at the end of a share period is larger than the high watermark.
-* Only the wealth created for the share price above high watermark is&#x20;
+* Only the wealth created for the share price above high watermark is taken into account.
 * Performance fee is paid out in shares, as all other fees.
-* Performance fee needs to be registered after management fee (i.e. management fee needs to be calculated first and management fee shares need to be ), but be
 * Order of fee registrations: Management Fee, Performance Fee, Entrance Fees, Exit Fees
 
 ### Formulas
