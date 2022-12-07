@@ -17,9 +17,8 @@ The Enzyme Council has a Chair and Vice Chair which rotate bi-annually. Their re
 * **Chain Security (ETC)**
 * **Exa:** Co-founder of Exponent (ETC)
 * **Janos Berghorn:** Investor @ KR1 (ETC)
-* **Giel Detienne**: User representative (EUR)
+* **David J. Sutcliffe:** Founder & CIO @ Insight 3 Capital
 * **Mona El Isa**: Founder & CEO @ Avantgarde Finance (ETC)
-* **Felix Hartmann**: Founder @ Hartmann Capital & User (EUR)
 * **Will Harborne**: Founder & CEO @ Deversifi (ETC)
 * **Nick Munoz-McDonald**: Smart Contract Auditor & Researcher @ G0 Group (ETC)
 * **Paul Salisbury**: Founder @ Blockchain Labs (ETC)
