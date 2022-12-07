@@ -18,7 +18,7 @@ Aave aTokens are held as collateral directly within the `ExternalPositionProxy` 
 
 Currently only handles variable debt, not stable debt.
 
-Docs: [https://docs.aave.com/](https://docs.aave.com)
+Docs: [https://docs.aave.com/](https://docs.aave.com/)
 
 Mainnet contracts:
 
@@ -85,7 +85,7 @@ Actions and considerations:
 
 Handles borrowing LUSD using ETH as collateral on Liquity.
 
-Docs: [https://docs.liquity.org/](https://docs.liquity.org)
+Docs: [https://docs.liquity.org/](https://docs.liquity.org/)
 
 Mainnet contracts:
 

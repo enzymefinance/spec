@@ -16,7 +16,7 @@ Staking wrappers are:
 
 ## ConvexCurveLpStakingWrapper
 
-A wrapper for staked Curve LP token positions in [Convex Finance](https://docs.convexfinance.com).
+A wrapper for staked Curve LP token positions in [Convex Finance](https://docs.convexfinance.com/).
 
 Notes and considerations:
 

@@ -6,7 +6,7 @@ In order to exchange some of a fund's assets for other assets, an adapter genera
 
 Integrates with Aave lending via aTokens.
 
-Docs: [https://docs.aave.com/](https://docs.aave.com)
+Docs: [https://docs.aave.com/](https://docs.aave.com/)
 
 Mainnet contracts:
 
@@ -60,7 +60,7 @@ Claiming accrued rewards on behalf of any fund can also be accomplished outside 
 
 Integrates with Curve's universal interface for swapping between any assets in a given pool.
 
-Docs: [https://curve.readthedocs.io/](https://curve.readthedocs.io)
+Docs: [https://curve.readthedocs.io/](https://curve.readthedocs.io/)
 
 Mainnet contracts:
 
@@ -74,7 +74,7 @@ Functions and considerations:
 
 Integrates with Curve pools that adhere to Curve's [pool templates](https://github.com/curvefi/curve-contract/tree/master/contracts/pool-templates) to allow liquidity provision-related actions, including staking to tokenized liquidity gauges (i.e., `LiquidityGaugeV2` and later).
 
-Docs: [https://curve.readthedocs.io/](https://curve.readthedocs.io)
+Docs: [https://curve.readthedocs.io/](https://curve.readthedocs.io/)
 
 Mainnet contracts:
 
@@ -123,7 +123,7 @@ Note that rewards are also claimable natively on Fuse on behalf of the fund (by 
 
 Integrates with the Idle Finance's `IdleToken` contracts using the functions available in V4 of its protocol.
 
-Docs: [https://developers.idle.finance/](https://developers.idle.finance)
+Docs: [https://developers.idle.finance/](https://developers.idle.finance/)
 
 Mainnet contracts: each `IdleToken`
 
@@ -140,7 +140,7 @@ Unclaimed rewards transfer to the recipient during ERC20 transfer calls, rather 
 
 Integrates with Olympus V2 to stake and unstake OHM for sOHM.
 
-Docs: [https://docs.olympusdao.finance/](https://docs.olympusdao.finance)
+Docs: [https://docs.olympusdao.finance/](https://docs.olympusdao.finance/)
 
 Mainnet contracts:
 
@@ -155,7 +155,7 @@ Functions and considerations:
 
 Integrates with ParaSwap (v5) via the `AugustusSwapper`. Incorporates asset approvals via the `TokenTransferProxy`.
 
-Docs: [https://doc.paraswap.network/](https://doc.paraswap.network)
+Docs: [https://doc.paraswap.network/](https://doc.paraswap.network/)
 
 Mainnet contracts:
 
@@ -170,7 +170,7 @@ Functions and considerations:
 
 Integrates with PoolTogether (v4).
 
-Docs: [https://v4.docs.pooltogether.com/](https://v4.docs.pooltogether.com)
+Docs: [https://v4.docs.pooltogether.com/](https://v4.docs.pooltogether.com/)
 
 Mainnet contracts:
 
@@ -193,7 +193,7 @@ Notes:
 
 Integrates with Synthetix via `SNX`.
 
-Docs: [https://docs.synthetix.io/](https://docs.synthetix.io)
+Docs: [https://docs.synthetix.io/](https://docs.synthetix.io/)
 
 Mainnet contracts:
 
@@ -208,7 +208,7 @@ Functions and considerations:
 
 Integrates with UniswapV2 for trading.
 
-Docs: [https://docs.uniswap.org/](https://docs.uniswap.org)
+Docs: [https://docs.uniswap.org/](https://docs.uniswap.org/)
 
 Mainnet contracts:
 
@@ -222,7 +222,7 @@ Functions and considerations:
 
 Integrates with UniswapV2 for liquidity provision and redemption.
 
-Docs: [https://docs.uniswap.org/](https://docs.uniswap.org)
+Docs: [https://docs.uniswap.org/](https://docs.uniswap.org/)
 
 Mainnet contracts:
 
@@ -238,7 +238,7 @@ Functions and considerations:
 
 Integrates with UniswapV3 for trading (not LP)
 
-Docs: [https://docs.uniswap.org/](https://docs.uniswap.org)
+Docs: [https://docs.uniswap.org/](https://docs.uniswap.org/)
 
 Mainnet contracts:
 
@@ -252,7 +252,7 @@ Functions and considerations:
 
 Integrates with Yearn vault v2 instances
 
-Docs: [https://docs.yearn.finance/](https://docs.yearn.finance)
+Docs: [https://docs.yearn.finance/](https://docs.yearn.finance/)
 
 Mainnet contracts:
 
