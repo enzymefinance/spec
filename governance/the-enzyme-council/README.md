@@ -12,18 +12,24 @@ If an Enzyme Council member has a conflict of interest on a specific question, t
 
 The Enzyme Council has a Chair and Vice Chair which rotate bi-annually. Their responsibilities include coordinating the meetings and agenda. The Enzyme Council also contains several sub-groups which take leadership roles on specific topics, such as: audits, features, ecosystem projects, network parameters, token economics, community calls, etc.&#x20;
 
-**Who sits on the Enzyme Council today?**
+#### **Who sits on the Enzyme Council today?**
 
-* **Chain Security (ETC)**
-* **Exa:** Co-founder of Exponent (ETC)
-* **Janos Berghorn:** Investor @ KR1 (ETC)
+Enzyme Technical Council:
+
+* **Chain Security**
+* **Exa:** Co-founder of Exponent
+* **Janos Berghorn:** Investor @ KR1
+* **Mona El Isa:** Founder & CEO @ Avantgarde Finance
+* **Nick Munoz-McDonald:** Smart Contract Auditor & Researcher @ G0 Group
+* **Paul Salisbury:** Founder @ Blockchain Labs
+* **Theophille Villard:** Co-founder of Multis wallet, contributor to Enzyme codebase
+* **Will Harborne:** Founder & CEO @ Deversifi
+* **Zahreddine Touag:** Founder @ Woorton
+
+Enzyme User Representatives:
+
+* **Christopher Chase:** Founder @ humanDAO
 * **David J. Sutcliffe:** Founder & CIO @ Insight 3 Capital
-* **Mona El Isa**: Founder & CEO @ Avantgarde Finance (ETC)
-* **Will Harborne**: Founder & CEO @ Deversifi (ETC)
-* **Nick Munoz-McDonald**: Smart Contract Auditor & Researcher @ G0 Group (ETC)
-* **Paul Salisbury**: Founder @ Blockchain Labs (ETC)
-* **Zahreddine Touag:** Founder @ Woorton (ETC)
-* **Theophille Villard**: Co-founder of Multis wallet, contributor to Enzyme codebase (ETC).
 
 #### **Incentive Structure**
 
