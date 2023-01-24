@@ -72,7 +72,7 @@ The designated `_recipient` receives a proportionate slice of the ERC20 assets i
 
 By default, these assets are limited to the "tracked assets" of the `VaultProxy`, but the redeemer can specify tracked assets to ignore (i.e., forfeit) or untracked assets to include (i.e., ERC20 tokens that belong to the `VaultProxy` but are not "tracked assets").
 
-E.g., FundA has 10 shares units issued and holds 20 WETH and 10 MLN. UserA redeems 1 share uint (10% of total supply). UserA receives 2 WETH and 1 MLN.
+E.g., FundA has 10 shares units issued and holds 20 WETH and 10 ZRX. UserA redeems 1 share uint (10% of total supply). UserA receives 2 WETH and 1 ZRX.
 
 No policies can run on this function, as it should be continuously available as a guaranteed redemption option, though there are cases where redeeming for full shares value would not be possible:
 
@@ -85,7 +85,7 @@ This latter point is critical: with rare exception, users in funds that are allo
 
 The redeemer specifies one or multiple of the `VaultProxy`'s ERC20 holdings along with the relative values of each to receive (for a total of 100%).
 
-E.g., FundA is denominated in DAI, has 10 shares units issued, and has a total GAV of 1000 DAI. UserA redeems 1 share unit (10% of total supply, worth 100 DAI) and specifies to receive 75% of owed value in DAI and 25% in MLN. UserA receives 75 DAI and 25 DAI worth of MLN.
+E.g., FundA is denominated in DAI, has 10 shares units issued, and has a total GAV of 1000 DAI. UserA redeems 1 share unit (10% of total supply, worth 100 DAI) and specifies to receive 75% of owed value in DAI and 25% in ZRX. UserA receives 75 DAI and 25 DAI worth of ZRX.
 
 Policies can implement `PolicyHook.RedeemSharesForSpecificAssets`  to define, for example, limits on assets that can be redeemed for.
 

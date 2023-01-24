@@ -140,7 +140,7 @@ The `ValueInterpreter` is the single point of aggregation of various "price feed
 
 There are two categories of assets in this release:
 
-* "primitives" - assets for which we have direct rates via Chainlink aggregators that can be used to convert one primitive to any other (e.g., WETH, MLN, etc)
+* "primitives" - assets for which we have direct rates via Chainlink aggregators that can be used to convert one primitive to any other (e.g., WETH, ZRX, etc)
 * "derivatives" - assets for which we only have rates in terms of underlying assets (e.g., Chai, Compound cTokens, Uniswap pool tokens, etc)
 
 The `ValueInterpreter` determines whether an asset is a primitive or derivative, and executes logic to use corresponding price feeds to determine the value in the output asset.

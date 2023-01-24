@@ -20,7 +20,7 @@
 * [Holdings and Shares](topics/fund-holdings.md)
 * [External Positions](topics/external-positions.md)
 * [Staking Wrappers](topics/staking-wrappers.md)
-* [Protocol Fee](topics/protocol-fee.md)
+* [Protocol Access](topics/protocol-fee.md)
 * [Gas Relayer](topics/gas-relayer.md)
 * [Policies](topics/policies.md)
 * [Asset pricing](topics/asset-pricing.md)
