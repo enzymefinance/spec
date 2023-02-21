@@ -75,7 +75,7 @@ Functions and considerations:
 
 ## CompoundAdapter
 
-Integrates with Compound Finance's cTokens. Each cToken is its own integratee.
+Integrates with Compound Finance's v2 cTokens. Each cToken is its own integratee.
 
 Docs: [https://compound.finance/docs](https://compound.finance/docs)
 
@@ -86,6 +86,25 @@ Mainnet contracts:&#x20;
 Functions and considerations:
 
 * `lend()` - fund receives `cToken` , which triggers the `VaultProxy` to start accumulating `COMP` based on the amount lent.
+* `redeem()` - None
+* `claimRewards()` - None
+
+Note that `COMP` is also claimable natively on Compound on behalf of the fund (by any user).
+
+## CompoundV3Adapter
+
+Integrates with Compound Finance's v3 cTokens. Each cToken is its own integratee.
+
+Docs: [https://compound.finance/docs](https://compound.finance/docs)
+
+Mainnet contracts:&#x20;
+
+* all cTokens, other than those with underlyings not supported in the Enzyme asset universe
+* `Rewards`: `0x1B0e765F6224C21223AeA2af16c1C46E38885a40`
+
+Functions and considerations:
+
+* `lend()` - fund receives `cToken` , which triggers the `VaultProxy` to start accumulating the reward token, if provisioned by the pool for the lent asset
 * `redeem()` - None
 * `claimRewards()` - None
 
