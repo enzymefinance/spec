@@ -112,7 +112,7 @@ Note that `COMP` is also claimable natively on Compound on behalf of the fund (b
 
 ## ConvexCurveLpStakingAdapter
 
-Integrates with [`ConvexCurveLpStakingWrapper`](../topics/staking-wrappers.md#convexcurvelpstakingwrapper) deployments to facilitate the staking of Curve LP tokens to Convex Finance.
+Integrates with [`ConvexCurveLpStakingWrapper`](../peripheral-features/staking-wrappers.md#convexcurvelpstakingwrapper) deployments to facilitate the staking of Curve LP tokens to Convex Finance.
 
 Also provides convenience functions to LP on Curve and then stake on Convex in the same action, i.e., `lendAndStake()` and `lendAndRedeem()`. These actions use the same logic for LP'ing as the [`CurveLiquidityAdapter`](adapter-integratees.md#curveliquidityadapter-1) and thus have the same requirements and considerations.
 
@@ -173,26 +173,6 @@ Claiming accrued rewards can also be accomplished outside of the adapter through
 * pool rewards - can be claimed by any party at any time on behalf of the `VaultProxy`
 
 Note on sidechains/L2s: earned $CRV is not paid via a `Minter` , but rather via the pool rewards mechanism described above.
-
-## FuseAdapter
-
-Integrates with Fuse fTokens. Each fToken is its own integratee.
-
-As a fork of Compound, all interactions are shared with the `CompoundAdapter`, other than a different mechanism for claiming rewards.
-
-Docs: [https://docs.rari.capital/fuse/](https://docs.rari.capital/fuse/)
-
-Mainnet contracts:&#x20;
-
-* all fTokens, other than those with underlyings not supported in the Enzyme asset universe
-
-Functions and considerations:
-
-* `lend()` - fund receives `fToken` , which triggers the `VaultProxy` to start accumulating any pool-specific rewards
-* `redeem()` - None
-* `claimRewards()` - None
-
-Note that rewards are also claimable natively on Fuse on behalf of the fund (by any user).
 
 ## IdleAdapter
 

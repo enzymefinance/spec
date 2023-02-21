@@ -19,7 +19,6 @@
 * [Fund Lifecycle](topics/creation-migration-reconfiguration.md)
 * [Holdings and Shares](topics/fund-holdings.md)
 * [External Positions](topics/external-positions.md)
-* [Staking Wrappers](topics/staking-wrappers.md)
 * [Protocol Access](topics/protocol-fee.md)
 * [Gas Relayer](topics/gas-relayer.md)
 * [Policies](topics/policies.md)
@@ -36,3 +35,8 @@
 * [Adapters](external-interactions/adapter-integratees.md)
 * [External Positions](external-interactions/external-positions.md)
 * [Price Feeds](external-interactions/price-feed-sources.md)
+
+## Peripheral Features
+
+* [Shares Wrappers](peripheral-features/shares-wrappers.md)
+* [Staking Wrappers](peripheral-features/staking-wrappers.md)

@@ -2,21 +2,9 @@
 
 Just as adapters and external positions interact with external "integratees," so do price feeds interact with sources that provide them with the data they need to provide rates.
 
-## AavePriceFeed
-
-Prices Aave `aTokens` , which are pegged 1:1 with the value of their underlying, e.g., 1 `aAAVE` is equal to 1 `AAVE` . `aTokens` accrue interest via a formulaic rebasing mechanism.
-
-Docs: [https://docs.aave.com/](https://docs.aave.com/)
-
-Mainnet contracts:
-
-`ProtocolDataProvider` : `0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d`&#x20;
-
-Considerations: Always directly returns the input amount as the output amount (i.e., 1:1 pegging)
-
 ## AuraBalancerV2LpStakingWrapperPriceFeed
 
-Converts an amount of a [`AuraBalancerV2LpStakingWrapper`](../topics/staking-wrappers.md#aurabalancerv2lpstakingwrapper) token into its underlying Balancer Pool Token (rate is always 1:1)
+Converts an amount of a [`AuraBalancerV2LpStakingWrapper`](../peripheral-features/staking-wrappers.md#aurabalancerv2lpstakingwrapper) token into its underlying Balancer Pool Token (rate is always 1:1)
 
 Mainnet contracts:
 
@@ -81,7 +69,7 @@ We query the cached rate instead of the live rate for gas savings. cTokens rates
 
 ## ConvexCurveLpStakingWrapperPriceFeed
 
-Converts an amount of a [`ConvexCurveLpStakingWrapper`](../topics/staking-wrappers.md#convexcurvelpstakingwrapper) token into its underlying Curve LP token (rate is always 1:1)
+Converts an amount of a [`ConvexCurveLpStakingWrapper`](../peripheral-features/staking-wrappers.md#convexcurvelpstakingwrapper) token into its underlying Curve LP token (rate is always 1:1)
 
 Mainnet contracts:
 
@@ -116,18 +104,6 @@ Mainnet contracts:
 Considerations:
 
 Goldfinch's withdrawal fee is included in the calculations.
-
-## FusePriceFeed
-
-Queries each Fuse Token (fToken) directly for its rate.
-
-Docs: [https://docs.rari.capital/fuse/](https://docs.rari.capital/fuse/)
-
-Mainnet contracts: each fToken
-
-Considerations:
-
-We query the cached rate instead of the live rate for gas savings. fTokens rates change negligibly for long periods of time.
 
 ## IdlePriceFeed
 
