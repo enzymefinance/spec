@@ -14,6 +14,47 @@ Mainnet contracts:
 
 Considerations: Always directly returns the input amount as the output amount (i.e., 1:1 pegging)
 
+## AuraBalancerV2LpStakingWrapperPriceFeed
+
+Converts an amount of a [`AuraBalancerV2LpStakingWrapper`](../topics/staking-wrappers.md#aurabalancerv2lpstakingwrapper) token into its underlying Balancer Pool Token (rate is always 1:1)
+
+Mainnet contracts:
+
+* each wrapper contract
+
+## BalancerV2GaugeTokenPriceFeed
+
+Converts an amount of a gauge-staked Balancer Pool Token (BPT) into its underlying BPT (rate is always 1:1)
+
+## BalancerV2StablePoolPriceFeed
+
+Prices Balancer Pool Tokens (BPTs) for pool types (e.g., ComposableStablePool, StablePool, etc) where all underlyings are assumed to hold a relative peg to the same invariant (e.g., USD stable coins, synthetic/wrapped representations of ETH, etc).
+
+Remembering that deriving the underlying value for a derivative in Enzyme consists of returning underlying asset(s) and amount(s), there are two components for returning a value:
+
+1. Underlying asset: each BPT is assigned an "invariant proxy asset," a supported asset in the protocol that is chosen to be the proxy (i.e., representative) of the pool invariant (e.g., WETH in the case of a wstETH pool).
+2. Underlying amount: the amount of the invariant proxy asset is calculated via the pool's `getRate()` that is based on internal balances and optional "rate providers" of its underlyings (provided natively in all such Balancer pools).
+
+Docs: [https://docs.balancer.fi/](https://docs.balancer.fi/)
+
+Mainnet contracts:
+
+`Vault`: `0xBA12222222228d8Ba445958a75a0704d566BF2C8`
+
+Considerations: See [#curvepricefeed](price-feed-sources.md#curvepricefeed "mention"), as the same considerations hold for the use of an "invariant proxy asset"
+
+## BalancerV2WeightedPoolPriceFeed
+
+Prices Balancer Pool Tokens (BPTs) for weighted pools
+
+Docs: [https://docs.balancer.fi/](https://docs.balancer.fi/)
+
+Mainnet contracts:
+
+`Vault`: `0xBA12222222228d8Ba445958a75a0704d566BF2C8`
+
+Considerations: Always returns the value in terms of the `INTERMEDIARY_ASSET` (same for all BPTs, per network), e.g., `WETH` on Ethereum mainnet.
+
 ## ChainlinkPriceFeedMixin
 
 Each rate pair (we use those quoted in either USD or ETH) is provided by a Chainlink "aggregator," and we interact with the proxy contracts for those aggregators.
@@ -52,7 +93,7 @@ Provides prices for all Curve LP tokens, both staked and unstaked. Staking LP to
 
 Remembering that deriving the underlying value for a derivative in Enzyme consists of returning underlying asset(s) and amount(s), there are two components for returning a value:
 
-1. Underlying asset: each LP token (staked or unstaked) is arbitrarily assigned an "invariant proxy asset," a supported asset in the protocol that is chosen to be the proxy (i.e., representative) of the pool invariant (e.g., WETH in the case of the stETH pool).
+1. Underlying asset: each LP token (staked or unstaked) is assigned an "invariant proxy asset," a supported asset in the protocol that is chosen to be the proxy (i.e., representative) of the pool invariant (e.g., WETH in the case of the stETH pool).
 2. Underlying amount: the amount of the invariant proxy asset is calculated via the pool's "virtual price" (provided natively in all Curve pools).
 
 Considerations:

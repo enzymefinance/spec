@@ -17,6 +17,47 @@ Functions and considerations:
 * `lend()` - None
 * `redeem()` - None
 
+## AuraBalancerV2LpStakingAdapter
+
+Integrates with Aura to stake and unstake Balancer Pool Tokens (BPTs), via wrapped Aura staking tokens.
+
+Can be used for combining Balancer LP/swap and Aura staking actions.
+
+Docs: [https://docs.aura.finance/](https://docs.aura.finance/)
+
+Mainnet contracts:
+
+* `Vault` (Balancer): `0xBA12222222228d8Ba445958a75a0704d566BF2C8`
+
+Functions and considerations:
+
+* `lendAndStake()` - None
+* `takeOrder()` - Uses Balancer Vault's `batchSwap()`. Use for LPing with nested composable stable pools.
+* `unstake()` - None
+* `unstakeAndRedeem()` - None
+
+Above action implementations are the same as [#balancerv2liquidityadapter](adapter-integratees.md#balancerv2liquidityadapter "mention")
+
+## BalancerV2LiquidityAdapter
+
+Integrates with Balancer v2 to swap, and to lend/redeem/stake/unstake Balancer Pool Tokens (BPTs).
+
+Docs: [https://docs.balancer.fi/](https://docs.balancer.fi/)
+
+Mainnet contracts:
+
+* `BalancerMinter`: `0x239e55F427D44C3cc793f49bFB507ebe76638a2b`
+* `Vault`: `0xBA12222222228d8Ba445958a75a0704d566BF2C8`
+
+Functions and considerations:
+
+* `lend()` - None
+* `lendAndStake()` - None
+* `redeem()` - None
+* `takeOrder()` - Uses Balancer Vault's `batchSwap()`. Use for LPing with nested composable stable pools.
+* `unstake()` - None
+* `unstakeAndRedeem()` - None
+
 ## CompoundAdapter
 
 Integrates with Compound Finance's cTokens. Each cToken is its own integratee.

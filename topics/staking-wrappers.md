@@ -14,6 +14,16 @@ Staking wrappers are:
 * limitedly pauseable (by the Enzyme Council; only deposits and harvesting new rewards are pauseable; withdrawals and reward claims are not)
 * upgradable proxies (by the Enzyme Council; for emergency use only)
 
+## AuraBalancerV2LpStakingWrapper
+
+A wrapper for staked Balancer Pool Tokens (BPTs) in [Aura Finance](https://aura.finance/).
+
+Notes and considerations:
+
+* one wrapper deployment represents one specific staked BPT
+* wrappers can be deployed by any party via the `AuraBalancerV2LpStakingWrapperFactory` (though the Enzyme Council will still need to add them to the asset universe)
+* there is only one official wrapper deployment per Aura pool (enforced by the `AuraBalancerV2LpStakingWrapperFactory`)
+
 ## ConvexCurveLpStakingWrapper
 
 A wrapper for staked Curve LP token positions in [Convex Finance](https://docs.convexfinance.com/).
