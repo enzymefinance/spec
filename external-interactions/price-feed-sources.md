@@ -2,18 +2,6 @@
 
 Just as adapters and external positions interact with external "integratees," so do price feeds interact with sources that provide them with the data they need to provide rates.
 
-## AavePriceFeed
-
-Prices Aave `aTokens` , which are pegged 1:1 with the value of their underlying, e.g., 1 `aAAVE` is equal to 1 `AAVE` . `aTokens` accrue interest via a formulaic rebasing mechanism.
-
-Docs: [https://docs.aave.com/](https://docs.aave.com/)
-
-Mainnet contracts:
-
-`ProtocolDataProvider` : `0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d`&#x20;
-
-Considerations: Always directly returns the input amount as the output amount (i.e., 1:1 pegging)
-
 ## AuraBalancerV2LpStakingWrapperPriceFeed
 
 Converts an amount of a [`AuraBalancerV2LpStakingWrapper`](../topics/staking-wrappers.md#aurabalancerv2lpstakingwrapper) token into its underlying Balancer Pool Token (rate is always 1:1)
