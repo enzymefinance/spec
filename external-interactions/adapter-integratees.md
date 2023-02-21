@@ -2,15 +2,30 @@
 
 In order to exchange some of a fund's assets for other assets, an adapter generally integrates with one or more "integratees," i.e., endpoints at which to interact with a defi protocol such as Uniswap, Compound, ParaSawp, etc.
 
-## AaveAdapter
+## AaveV2Adapter
 
-Integrates with Aave lending via aTokens.
+Integrates with Aave v2 lending via aTokens.
 
 Docs: [https://docs.aave.com/](https://docs.aave.com/)
 
 Mainnet contracts:
 
 * `LendingPoolAddressesProvider`: `0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5`&#x20;
+
+Functions and considerations:
+
+* `lend()` - None
+* `redeem()` - None
+
+## AaveV3Adapter
+
+Integrates with Aave v3 lending via aTokens.
+
+Docs: [https://docs.aave.com/](https://docs.aave.com/)
+
+Mainnet contracts:
+
+* `Pool`: `0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2`&#x20;
 
 Functions and considerations:
 
@@ -205,6 +220,7 @@ Mainnet contracts:
 
 Functions and considerations:
 
+* `takeMultipleOrders()` - None
 * `takeOrder()` - None
 
 ## PoolTogetherV4Adapter
