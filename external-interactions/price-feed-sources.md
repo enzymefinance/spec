@@ -178,7 +178,15 @@ See also the sample implementation we based this on: [https://github.com/Uniswap
 
 Considerations: Live prices
 
+## WstethPriceFeed
 
+Provides a value for wrapped stETH (wstETH)
+
+Docs: [https://docs.lido.fi/contracts/wsteth/](https://docs.lido.fi/contracts/wsteth/)
+
+Mainnet contracts:
+
+* stETH: `0xae7ab96520de3a18e5e111b5eaab095312d7fe84`
 
 ## YearnVaultV2PriceFeed
 
