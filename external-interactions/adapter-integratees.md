@@ -205,7 +205,6 @@ Mainnet contracts:
 
 Functions and considerations:
 
-* `takeMultipleOrders()` - None
 * `takeOrder()` - None
 
 ## PoolTogetherV4Adapter

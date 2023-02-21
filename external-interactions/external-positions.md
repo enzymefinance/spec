@@ -81,6 +81,18 @@ Actions and considerations:
 * `ClaimRewards` - None
 * `Delegate` - None
 
+### KilnStakingPosition
+
+Handles staking ETH on the Beacon Chain via [Kiln](https://www.kiln.fi/)
+
+Docs: [https://docs.kiln.fi/v1/](https://docs.kiln.fi/v1/)
+
+Actions and considerations:
+
+* `ClaimFees` - Only execution layer fees for now. Consensus layer fee support will be added post-Shanghai
+* `Stake` - None
+* `WithdrawEth` - Transfers any ETH in the contract to the VaultProxy
+
 ### LiquityDebtPosition
 
 Handles borrowing LUSD using ETH as collateral on Liquity.
