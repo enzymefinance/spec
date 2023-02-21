@@ -150,6 +150,39 @@ Actions and considerations:
 * `Lend` - Repaying a `Borrow` is done by calling `Lend` with the desired amount to repay
 * `Redeem` - None
 
+### SolvV2BondBuyerPosition
+
+Handles buying Solv v2 bonds at IVO (initial voucher offering) and claiming bond value at settlement.
+
+Docs: [https://docs.solv.finance/](https://docs.solv.finance/)
+
+Mainnet contracts:
+
+* `InitialConvertibleOfferingMarket`: `0x`
+
+Actions and considerations:
+
+* `BuyOffering` - Once bought, any held voucher will result in an invalid (reverting) GAV/share price until that voucher's maturity
+* `Claim` - None
+
+### SolvV2BondIssuerPosition
+
+Handles issuing Solv v2 bonds at IVO (initial voucher offering) and settling bond value at settlement.
+
+Docs: [https://docs.solv.finance/](https://docs.solv.finance/)
+
+Mainnet contracts:
+
+* `InitialConvertibleOfferingMarket`: `0x`
+
+Actions and considerations:
+
+* `CreateOffer` - Once created, any issued voucher will result in an invalid (reverting) GAV/share price until that voucher's maturity
+* `Reconcile` - None
+* `Refund` - None
+* `RemoveOffer` - None
+* `Withdraw` - None
+
 ### TheGraphDelegationPosition
 
 Handles delegating $GRT to indexers on The Graph.
