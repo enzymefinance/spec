@@ -103,27 +103,23 @@ Actions and considerations:
 
 ### MapleLiquidityPosition
 
-Handles lending on Maple Finance.
+Handles lending on Maple Finance
 
 Docs: [https://maplefinance.gitbook.io/maple/](https://maplefinance.gitbook.io/maple/)
 
 Mainnet contracts:
 
 * each Maple pool
-* `MplRewardsFactory`: `0x0155729EbCd47Cb1fBa02bF5a8DA20FaF3860535`
-* `PoolFactory` : `0x2Cd79F7f8b38B9c0D80EA6B230441841A31537eC`&#x20;
+* `MplRewardsFactory` (v1): `0x0155729EbCd47Cb1fBa02bF5a8DA20FaF3860535`
+* `MapleGlobals` (v2): `0x804a6F5F667170F545Bf14e5DDB48C70B788390C`
 
 Actions and considerations:
 
-* `Lend` - None
-* `LendAndStake` - Starts accrual of MPL rewards
-* `IntendToRedeem` - None
-* `Redeem` - Also claims all interest due
-* `Stake` - Starts accrual of MPL rewards
-* `Unstake` - Stops accrual of MPL rewards for the amount unstaked
-* `UnstakeAndRedeem` - Stops accrual of MPL rewards for the amount unstaked
-* `ClaimInterest` - None
-* `ClaimRewards` - None
+* `CancelRedeemV2` - None
+* `LendV2` - None
+* `RedeemV2` - None
+* `RequestRedeemV2` - None
+* `ClaimRewardsV1` - (legacy action for unclaimed MPL rewards)
 
 ### TheGraphDelegationPosition
 
