@@ -105,18 +105,6 @@ Considerations:
 
 Goldfinch's withdrawal fee is included in the calculations.
 
-## FusePriceFeed
-
-Queries each Fuse Token (fToken) directly for its rate.
-
-Docs: [https://docs.rari.capital/fuse/](https://docs.rari.capital/fuse/)
-
-Mainnet contracts: each fToken
-
-Considerations:
-
-We query the cached rate instead of the live rate for gas savings. fTokens rates change negligibly for long periods of time.
-
 ## IdlePriceFeed
 
 Provides a value for each `IdleToken` to its underlying asset.

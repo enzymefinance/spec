@@ -174,26 +174,6 @@ Claiming accrued rewards can also be accomplished outside of the adapter through
 
 Note on sidechains/L2s: earned $CRV is not paid via a `Minter` , but rather via the pool rewards mechanism described above.
 
-## FuseAdapter
-
-Integrates with Fuse fTokens. Each fToken is its own integratee.
-
-As a fork of Compound, all interactions are shared with the `CompoundAdapter`, other than a different mechanism for claiming rewards.
-
-Docs: [https://docs.rari.capital/fuse/](https://docs.rari.capital/fuse/)
-
-Mainnet contracts:&#x20;
-
-* all fTokens, other than those with underlyings not supported in the Enzyme asset universe
-
-Functions and considerations:
-
-* `lend()` - fund receives `fToken` , which triggers the `VaultProxy` to start accumulating any pool-specific rewards
-* `redeem()` - None
-* `claimRewards()` - None
-
-Note that rewards are also claimable natively on Fuse on behalf of the fund (by any user).
-
 ## IdleAdapter
 
 Integrates with the Idle Finance's `IdleToken` contracts using the functions available in V4 of its protocol.
