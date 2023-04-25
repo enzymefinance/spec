@@ -191,21 +191,6 @@ Functions and considerations:
 
 Unclaimed rewards transfer to the recipient during ERC20 transfer calls, rather than auto-checkpointing as other protocols do.
 
-## OlympusV2Adapter
-
-Integrates with Olympus V2 to stake and unstake OHM for sOHM.
-
-Docs: [https://docs.olympusdao.finance/](https://docs.olympusdao.finance/)
-
-Mainnet contracts:
-
-* `StakingContract` - `0xB63cac384247597756545b500253ff8E607a8020`
-
-Functions and considerations:
-
-* `stake()` - none
-* `unstake()` - none
-
 ## ParaSwapV5Adapter
 
 Integrates with ParaSwap (v5) via the `AugustusSwapper`. Incorporates asset approvals via the `TokenTransferProxy`.
