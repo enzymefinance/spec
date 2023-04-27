@@ -133,23 +133,6 @@ Actions and considerations:
 * `RequestRedeemV2` - None
 * `ClaimRewardsV1` - (legacy action for unclaimed MPL rewards)
 
-### NotionalV2Position
-
-Handles lending and borrowing on Notional Finance v2
-
-Docs: [https://docs.notional.finance/](https://docs.notional.finance/)
-
-Mainnet contracts:
-
-* `Router`: `0x1344A36A1B56144C3Bc62E7757377D288fDE0369`
-
-Actions and considerations:
-
-* `AddCollateral` - None
-* `Borrow` - None
-* `Lend` - Repaying a `Borrow` is done by calling `Lend` with the desired amount to repay
-* `Redeem` - None
-
 ### SolvV2BondBuyerPosition
 
 Handles buying Solv v2 bonds at IVO (initial voucher offering) and claiming bond value at settlement.
