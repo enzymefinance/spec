@@ -105,6 +105,5 @@ _Adapter mitigations:_
 
 * user a policy that only allows Enzyme Council-trusted adapters
 
-_****_
 
-****
+

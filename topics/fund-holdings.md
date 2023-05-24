@@ -6,7 +6,7 @@ The core functionality of a fund is:
 * using those deposits to build a portfolio of on-chain asset **holdings**
 * facilitating the **redemption** of shares for access to portfolio holdings
 
-Each fund is configured with a "denomination asset," which is the unit of account for calculating GAV **** and share price.
+Each fund is configured with a "denomination asset," which is the unit of account for calculating GAV and share price.
 
 ## **Holdings**
 
@@ -66,7 +66,7 @@ In both cases, shares are burned in exchange for access to proportionate underly
 
 In both cases, fees can be run prior to the redemption via `FeeHook.PreRedeemShares`.
 
-#### **`redeemSharesInKind()` **&#x20;
+#### **`redeemSharesInKind()`**&#x20;
 
 The designated `_recipient` receives a proportionate slice of the ERC20 assets in the `VaultProxy` , relative to the amount of shares being redeemed.&#x20;
 

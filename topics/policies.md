@@ -1,6 +1,6 @@
 # Policies
 
-Policies **** are intended to provide particular guarantees that help establish trust between current investors and fund managers:
+Policies are intended to provide particular guarantees that help establish trust between current investors and fund managers:
 
 * actions of fund managers
 * actions of current investors
