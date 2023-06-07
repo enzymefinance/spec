@@ -4,7 +4,7 @@ Performance Fees for pre-Sulu releases include the concept of a “crystallisati
 
 By removing the concept of “crystallisation period”, we can greatly simplify the implementation of the performance fee in the protocol.
 
-This also implies that performance fee can be claimed at any time.&#x20;
+This also implies that the performance fee is paid out at any time one of the triggering events happens.&#x20;
 
 Without a "crystallisation period" the manager can potentially earn more performance fees through continuous accrual instead of quarterly or yearly accrual. Managers should therefore set the rate for the new simplified performance fee lower than the rate of the previously used performance fee.
 
