@@ -91,6 +91,20 @@ Since an arbitrary asset is chosen for the single underlying asset returned by t
 * Assets that temporarily lose their peg will generally lose it in the downward direction, which would cause the redeemable value of an LP token to be less than its virtual price-derived Enzyme value. This condition is not susceptible to investor-side arbitrage in Enzyme funds, where the concern is preventing the purchase of discounted shares (whereas using the virtual price results in temporarily inflated share price). Further, as long as the loss of peg is assumed to be temporary, using the virtual price rather than this ephemeral imbalance protects the fund from discounted shares.
 * In the more extreme case of permanent loss of peg, Curve only works if all pooled assets generally hold their peg to the invariant. If any one asset were to permanently lose its peg to the invariant, the redeemable value of the LP token itself would capitulate, as arbitragers drain the pool of all but the fallen asset.
 
+## ERC4626PriceFeed
+
+Prices tokenized vault shares following the ERC4626 standard.
+
+Docs: [https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/)
+
+Mainnet contracts:
+
+* each ERC4626 vault
+
+Considerations:
+
+* uses `ERC4626.convertToAssets()` for pricing
+
 ## FiduPriceFeed
 
 Provides a value for Goldfinch's FIDU token.

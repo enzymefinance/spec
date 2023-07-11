@@ -174,6 +174,18 @@ Claiming accrued rewards can also be accomplished outside of the adapter through
 
 Note on sidechains/L2s: earned $CRV is not paid via a `Minter` , but rather via the pool rewards mechanism described above.
 
+## ERC4626Adapter
+
+Integrates with any tokenized vault that implements the ERC4626 standard, unless there is some non-standard behavior (e.g., redemption queue, special rewards claiming, etc).
+
+Docs: [https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/)
+
+Functions and considerations:
+
+* `lend()` : calls `ERC4626.deposit()`
+* `redeem()`: calls `ERC4626.redeem()`
+* no further options for interacting are currently supported
+
 ## IdleAdapter
 
 Integrates with the Idle Finance's `IdleToken` contracts using the functions available in V4 of its protocol.
