@@ -23,33 +23,17 @@ Remembering that deriving the underlying value for a derivative in Enzyme consis
 1. Underlying asset: each BPT is assigned an "invariant proxy asset," a supported asset in the protocol that is chosen to be the proxy (i.e., representative) of the pool invariant (e.g., WETH in the case of a wstETH pool).
 2. Underlying amount: the amount of the invariant proxy asset is calculated via the pool's `getRate()` that is based on internal balances and optional "rate providers" of its underlyings (provided natively in all such Balancer pools).
 
-Docs: [https://docs.balancer.fi/](https://docs.balancer.fi/)
-
-Mainnet contracts:
-
-`Vault`: `0xBA12222222228d8Ba445958a75a0704d566BF2C8`
-
 Considerations: See [#curvepricefeed](price-feed-sources.md#curvepricefeed "mention"), as the same considerations hold for the use of an "invariant proxy asset"
 
 ## BalancerV2WeightedPoolPriceFeed
 
 Prices Balancer Pool Tokens (BPTs) for weighted pools
 
-Docs: [https://docs.balancer.fi/](https://docs.balancer.fi/)
-
-Mainnet contracts:
-
-`Vault`: `0xBA12222222228d8Ba445958a75a0704d566BF2C8`
-
 Considerations: Always returns the value in terms of the `INTERMEDIARY_ASSET` (same for all BPTs, per network), e.g., `WETH` on Ethereum mainnet.
 
 ## ChainlinkPriceFeedMixin
 
 Each rate pair (we use those quoted in either USD or ETH) is provided by a Chainlink "aggregator," and we interact with the proxy contracts for those aggregators.
-
-Docs: [https://docs.chain.link/](https://docs.chain.link/)
-
-Mainnet contracts: each aggregator
 
 Considerations:
 
@@ -59,10 +43,6 @@ We do not check timestamps on every price lookup, rather we provide a function t
 
 Queries each Compound Token (cToken) directly for its rate.
 
-Docs: [https://compound.finance/docs](https://compound.finance/docs)
-
-Mainnet contracts: each cToken
-
 Considerations:
 
 We query the cached rate instead of the live rate for gas savings. cTokens rates change negligibly for long periods of time.
@@ -70,10 +50,6 @@ We query the cached rate instead of the live rate for gas savings. cTokens rates
 ## ConvexCurveLpStakingWrapperPriceFeed
 
 Converts an amount of a [`ConvexCurveLpStakingWrapper`](../peripheral-features/staking-wrappers.md#convexcurvelpstakingwrapper) token into its underlying Curve LP token (rate is always 1:1)
-
-Mainnet contracts:
-
-* each wrapper contract
 
 ## CurvePriceFeed
 
@@ -95,12 +71,6 @@ Since an arbitrary asset is chosen for the single underlying asset returned by t
 
 Prices tokenized vault shares following the ERC4626 standard.
 
-Docs: [https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/)
-
-Mainnet contracts:
-
-* each ERC4626 vault
-
 Considerations:
 
 * uses `ERC4626.convertToAssets()` for pricing
@@ -108,12 +78,6 @@ Considerations:
 ## FiduPriceFeed
 
 Provides a value for Goldfinch's FIDU token.
-
-Docs: [https://docs.goldfinch.finance/goldfinch/](https://docs.goldfinch.finance/goldfinch/)
-
-Mainnet contracts:
-
-* FIDU token: `0x6a445E9F40e0b97c92d0b8a3366cEF1d67F700BF`
 
 Considerations:
 
@@ -123,21 +87,11 @@ Goldfinch's withdrawal fee is included in the calculations.
 
 Provides a value for each `IdleToken` to its underlying asset.
 
-Docs: [https://developers.idle.finance/](https://developers.idle.finance/)
-
-Mainnet contracts: each `IdleToken`
-
 Considerations: Does not take into account user-specific fees (i.e., relative to the vault) that are charged upon redeeming `IdleToken` for its underlying
 
 ## PoolTogetherV4PriceFeed
 
 Prices PoolTogether `ptTokens` , which are pegged 1:1 with the value of their underlying, e.g., 1 `ptUSDC` is equal to 1 `USDC` .
-
-Docs: [https://v4.docs.pooltogether.com/](https://v4.docs.pooltogether.com/)
-
-Mainnet contracts:
-
-* each `ptToken`
 
 ## RevertingPriceFeed
 
@@ -157,36 +111,17 @@ Note that reverting fees are skipped during shares redemption, which would affec
 
 Uses a special pool manipulation-resistant formula that takes into consideration the current underlying asset balances and pool token balance in the given Uniswap pool (`UniswapV2Pair`) along with a trusted rate between the two underlying tokens.
 
-Docs: [https://docs.uniswap.org/](https://docs.uniswap.org/)
-
-Mainnet contracts:
-
-* `UniswapV2Factory`: `0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f`
-* instances of `UniswapV2Pair`
-
 See also the sample implementation we based this on: [https://github.com/Uniswap/uniswap-v2-periphery/blob/267ba44471f3357071a2fe2573fe4da42d5ad969/contracts/libraries/UniswapV2LiquidityMathLibrary.sol](https://github.com/Uniswap/uniswap-v2-periphery/blob/267ba44471f3357071a2fe2573fe4da42d5ad969/contracts/libraries/UniswapV2LiquidityMathLibrary.sol)
 
 Considerations: Live prices
 
 ## WstethPriceFeed
 
-Provides a value for wrapped stETH (wstETH)
-
-Docs: [https://docs.lido.fi/contracts/wsteth/](https://docs.lido.fi/contracts/wsteth/)
-
-Mainnet contracts:
-
-* stETH: `0xae7ab96520de3a18e5e111b5eaab095312d7fe84`
+Provides a value for wrapped Lido stETH (wstETH)
 
 ## YearnVaultV2PriceFeed
 
 Provides a value for each `yVault` (Yearn vault v2) in terms of its underlying asset
-
-Docs: [https://docs.yearn.finance/](https://docs.yearn.finance/)
-
-Mainnet contracts:
-
-* Registry/Deployer: `0x50c1a2eA0a861A967D9d0FFE2AE4012c2E053804`
 
 Considerations:
 

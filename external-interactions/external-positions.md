@@ -18,14 +18,6 @@ Aave aTokens are held as collateral directly within the `ExternalPositionProxy` 
 
 Currently only handles variable debt, not stable debt.
 
-Docs: [https://docs.aave.com/](https://docs.aave.com/)
-
-Mainnet contracts:
-
-* each aToken
-* `LendingPoolAddressesProvider`: `0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5`&#x20;
-* `ProtocolDataProvider` : `0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d`&#x20;
-
 Actions and considerations:
 
 * `AddCollateral` - None
@@ -42,8 +34,6 @@ Aave aTokens are held as collateral directly within the `ExternalPositionProxy` 
 
 Currently only handles variable debt, not stable debt.
 
-Docs: [https://docs.aave.com/](https://docs.aave.com/)
-
 Actions and considerations:
 
 * `AddCollateral` - can specify either aToken or its underlying (wraps to aToken)
@@ -59,14 +49,7 @@ Handles creating (borrowing), managing, and repaying debt positions on Compound 
 
 Compound cTokens are held as collateral directly within the `ExternalPositionProxy` instance, which acts as the owner of the CDP.
 
-Docs: [https://compound.finance/docs](https://compound.finance/docs)
-
-Mainnet contracts:
-
-* each cToken supported by the `CompoundPriceFeed`
-* `CompoundComptroller` - `0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B`
-
-&#x20;Actions and considerations:
+Actions and considerations:
 
 * `AddCollateral` - Receives cTokens from the vault which accrues COMP to the `ExternalPositionProxy`
 * `RemoveCollateral` - None
@@ -82,16 +65,6 @@ Does not currently support actually voting, which can be easily be accomplished 
 
 Note that this uses `CvxLockerV2`, the second locker implementation.
 
-Docs: [https://docs.convexfinance.com/convexfinance/](https://docs.convexfinance.com/convexfinance/)
-
-Mainnet contracts:
-
-* `BaseRewardPool` (cvxCrv staking) :  `0x3Fe65692bfCD0e6CF84cB1E7d24108E434A7587e`
-* `ConvexToken` : `0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B`
-* `CvxLockerV2`: `0x72a19342e8F1838460eBFCCEf09F6585e32db86E`
-* `MultiMerkleStash` (Votium): `0x378Ba9B73309bE80BF4C2c027aAD799766a7ED5A`
-* `vlCvxExtraRewardDistribution`: `0x9B622f2c40b80EF5efb14c2B2239511FfBFaB702`
-
 Actions and considerations:
 
 * `Lock` - Starts accrual of cvxCRV rewards and any extra rewards
@@ -102,9 +75,7 @@ Actions and considerations:
 
 ### KilnStakingPosition
 
-Handles staking ETH on the Beacon Chain via [Kiln](https://www.kiln.fi/)
-
-Docs: [https://docs.kiln.fi/v1/](https://docs.kiln.fi/v1/)
+Handles staking ETH on the Beacon Chain via Kiln
 
 Actions and considerations:
 
@@ -115,13 +86,6 @@ Actions and considerations:
 ### LiquityDebtPosition
 
 Handles borrowing LUSD using ETH as collateral on Liquity.
-
-Docs: [https://docs.liquity.org/](https://docs.liquity.org/)
-
-Mainnet contracts:
-
-* `BorrowerOperations`: `0x24179CD81c9e782A4096035f7eC97fB8B783e007`
-* `TroveManager` : `0xA39739EF8b0231DbFA0DcdA07d7e29faAbCf4bb2`
 
 Actions and considerations:
 
@@ -136,14 +100,6 @@ Actions and considerations:
 
 Handles lending on Maple Finance
 
-Docs: [https://maplefinance.gitbook.io/maple/](https://maplefinance.gitbook.io/maple/)
-
-Mainnet contracts:
-
-* each Maple pool
-* `MplRewardsFactory` (v1): `0x0155729EbCd47Cb1fBa02bF5a8DA20FaF3860535`
-* `MapleGlobals` (v2): `0x804a6F5F667170F545Bf14e5DDB48C70B788390C`
-
 Actions and considerations:
 
 * `CancelRedeemV2` - None
@@ -156,12 +112,6 @@ Actions and considerations:
 
 Handles buying Solv v2 bonds at IVO (initial voucher offering) and claiming bond value at settlement.
 
-Docs: [https://docs.solv.finance/](https://docs.solv.finance/)
-
-Mainnet contracts:
-
-* `InitialConvertibleOfferingMarket`: `0x`
-
 Actions and considerations:
 
 * `BuyOffering` - Once bought, any held voucher will result in an invalid (reverting) GAV/share price until that voucher's maturity
@@ -170,12 +120,6 @@ Actions and considerations:
 ### SolvV2BondIssuerPosition
 
 Handles issuing Solv v2 bonds at IVO (initial voucher offering) and settling bond value at settlement.
-
-Docs: [https://docs.solv.finance/](https://docs.solv.finance/)
-
-Mainnet contracts:
-
-* `InitialConvertibleOfferingMarket`: `0x`
 
 Actions and considerations:
 
@@ -188,12 +132,6 @@ Actions and considerations:
 ### TheGraphDelegationPosition
 
 Handles delegating $GRT to indexers on The Graph.
-
-Docs: [https://thegraph.com/docs/en/](https://thegraph.com/docs/en/)
-
-Mainnet contracts:
-
-* `GraphProxy`: `0xf55041e37e12cd407ad00ce2910b8269b01263b9`
 
 Actions and considerations:
 
@@ -208,12 +146,6 @@ Handles minting, adding/removing liquidity, collecting fees, and burning Uniswap
 A minted nft representing a particular LP position (distinct fee, ticks, and token amounts) is owned by an `ExternalPositionProxy` of this type.&#x20;
 
 One such `ExternalPositionProxy` instance can own and manage multiple nfts of any token pairs (i.e., one fund can manage all of its NFTs in a single contract).
-
-Docs: [https://docs.uniswap.org/protocol/reference/periphery/NonfungiblePositionManager](https://docs.uniswap.org/protocol/reference/periphery/NonfungiblePositionManager)
-
-Mainnet contracts:
-
-* `NonfungiblePositionManager` - `0xC36442b4a4522E871399CD717aBDD847Ab11FE88`
 
 &#x20;Actions and considerations:
 
