@@ -10,9 +10,9 @@ A vault can have many active external positions of the same type.
 
 There are no globally-enforced limitations on the asset counts that can be managed within any external position. If the need for a such a limitation arises for particular external position types, then a limitation should be imposed by the parser contract for that type.
 
-### AaveDebtPosition
+### AaveDebtPosition (v2)
 
-Handles creating (borrowing), managing, and repaying debt positions on Aave.
+Handles creating (borrowing), managing, and repaying debt positions on Aave v2.
 
 Aave aTokens are held as collateral directly within the `ExternalPositionProxy` instance, which acts as the owner of the CDP.
 
@@ -33,6 +33,25 @@ Actions and considerations:
 * `Borrow` - Borrowing accrues stkAAVE to the `ExternalPositionProxy`
 * `RepayBorrow` - None
 * `ClaimStkAave` - None
+
+### AaveV3DebtPosition
+
+Handles creating (borrowing), managing, and repaying debt positions on Aave v3.
+
+Aave aTokens are held as collateral directly within the `ExternalPositionProxy` instance, which acts as the owner of the CDP.
+
+Currently only handles variable debt, not stable debt.
+
+Docs: [https://docs.aave.com/](https://docs.aave.com/)
+
+Actions and considerations:
+
+* `AddCollateral` - can specify either aToken or its underlying (wraps to aToken)
+* `RemoveCollateral` - can specify either aToken or its underlying (unwraps aToken collateral)
+* `Borrow` - None
+* `RepayBorrow` - None
+* `SetEMode` - Used to toggle eMode (see Aave docs)
+* `SetUseReserveAsCollateral` - Used to toggle isolation mode (see Aave docs)
 
 ### CompoundDebtPosition
 
