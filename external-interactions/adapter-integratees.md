@@ -308,7 +308,7 @@ Note that while all Yearn vault v2 instances adhere to the same interface, each 
 
 ## ZeroExV2Adapter
 
-Integrates with the 0x Protocol. This adapter limits orders to makers approved by the Enzyme Council.
+Integrates with the 0x Protocol v2. This adapter limits orders to makers approved by the Enzyme Council.
 
 Docs: [https://github.com/0xProject/0x-protocol-specification/blob/master/v2/v2-specification.md](https://github.com/0xProject/0x-protocol-specification/blob/master/v2/v2-specification.md)
 
@@ -316,6 +316,22 @@ Mainnet contracts:
 
 * `Exchange`: `0x080bf510fcbf18b91105470639e9561022937712`
 * `ERC20Proxy`: `0x95e6f48254609a6ee006f7d493c8e5fb97094cef`
+
+Functions and considerations:
+
+* `takeOrder()` -  none
+
+## ZeroExV4Adapter
+
+Integrates with the 0x Protocol v4.
+
+This adapter limits orders to a list of makers, defined on the adapter. There can be multiple deployments of this adapter to facilitate different lists of allowed makers (or any maker).
+
+Docs: [https://0x.org/docs/](https://0x.org/docs/)
+
+Mainnet contracts:
+
+* `Exchange`: `0xdef1c0ded9bec7f1a1670819833240f027b25eff`
 
 Functions and considerations:
 
