@@ -191,6 +191,21 @@ Functions and considerations:
 
 Unclaimed rewards transfer to the recipient during ERC20 transfer calls, rather than auto-checkpointing as other protocols do.
 
+## OneInchV5Adapter
+
+Integrates with 1Inch (v5) swaps.
+
+Docs: [https://docs.1inch.io/](https://docs.1inch.io/)
+
+Mainnet contracts:
+
+* `AggregationRouterV5`: `0x1111111254eeb25477b68fb85ed929f73a960582`
+
+Functions and considerations:
+
+* `takeMultipleOrders()` - None
+* `takeOrder()` - None
+
 ## ParaSwapV5Adapter
 
 Integrates with ParaSwap (v5) via the `AugustusSwapper`. Incorporates asset approvals via the `TokenTransferProxy`.
