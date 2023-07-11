@@ -79,9 +79,13 @@ Handles staking ETH on the Beacon Chain via Kiln
 
 Actions and considerations:
 
-* `ClaimFees` - Only execution layer fees for now. Consensus layer fee support will be added post-Shanghai
-* `Stake` - None
-* `WithdrawEth` - Transfers any ETH in the contract to the VaultProxy
+* `ClaimFees` - Can claim execution layer rewards, consensus layer rewards, or both. Consensus layer rewards also includes exited validator stake.
+* `Stake` - In chunks of 32 ETH (i.e., not partial validators)
+* `SweepEth` - Transfers any ETH in the contract to the VaultProxy
+* `Unstake` - Joins the consensus layer exit queue, and the exited stake will need to be claimed into the Enzyme vault by calling the `ClaimFees` action for consensus layer rewards
+* `PausePositionValue` - Causes KilnStakingPosition valuation to revert, which will also cause Enzyme vault share price calcs to revert. Can be used to temporarily close Enzyme vault deposits and redemptions in case of share mis-pricing due to a substantial slashing event until the KilnStakingPosition accounting corrects.
+* `UnpausePositionValue` - None
+* As with ETH staking integrations in general, slashing leads to temporarily over-pricing a validator's value (due to the delay of broadcasting a slashing event to the execution layer, and the uncertainty of slashed amount). This would lead to temporarily over-priced Enzyme vault shares. An asset manager could use the `PausePositionValue` action as a mitigation.
 
 ### LiquityDebtPosition
 
