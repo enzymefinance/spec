@@ -112,18 +112,6 @@ Actions and considerations:
 * `RequestRedeemV2` - None
 * `ClaimRewardsV1` - (legacy action for unclaimed MPL rewards)
 
-### StakeWiseV3StakingPosition
-
-Handles staking ETH on the Beacon Chain via StakeWise v3 vaults
-
-Actions and considerations:
-
-* `Stake` - Does not need to be 32 ETH increments
-* `Redeem` - Only if the StakeWise vault has a sufficient ETH balance
-* `EnterExitQueue` - Joins the consensus layer exit queue, and the exited stake will need to be claimed into the Enzyme vault by calling the `ClaimExitedAssets`&#x20;
-* `ClaimExitedAssets` - If only partially claimable, a new exit request is created for the remaining requested amount
-* As with ETH staking integrations in general, slashing leads to temporarily over-pricing a validator's value (due to the delay of broadcasting a slashing event to the execution layer, and the uncertainty of slashed amount). This would lead to temporarily over-priced Enzyme vault shares.
-
 ### SolvV2BondBuyerPosition
 
 Handles buying Solv v2 bonds at IVO (initial voucher offering) and claiming bond value at settlement.
@@ -144,6 +132,18 @@ Actions and considerations:
 * `Refund` - None
 * `RemoveOffer` - None
 * `Withdraw` - None
+
+### StakeWiseV3StakingPosition
+
+Handles staking ETH on the Beacon Chain via StakeWise v3 vaults
+
+Actions and considerations:
+
+* `Stake` - Does not need to be 32 ETH increments
+* `Redeem` - Only if the StakeWise vault has a sufficient ETH balance
+* `EnterExitQueue` - Joins the consensus layer exit queue, and the exited stake will need to be claimed into the Enzyme vault by calling the `ClaimExitedAssets`&#x20;
+* `ClaimExitedAssets` - If only partially claimable, a new exit request is created for the remaining requested amount
+* As with ETH staking integrations in general, slashing leads to temporarily over-pricing a validator's value (due to the delay of broadcasting a slashing event to the execution layer, and the uncertainty of slashed amount). This would lead to temporarily over-priced Enzyme vault shares.
 
 ### TheGraphDelegationPosition
 
