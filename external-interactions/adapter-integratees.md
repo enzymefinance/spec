@@ -158,17 +158,6 @@ Functions and considerations:
 * `takeMultipleOrders()` - None
 * `takeOrder()` - None
 
-## SynthetixAdapter
-
-\[Deprecated. Can currently only be used to purge already-held synths into sUSD]
-
-Integrates with Synthetix via `SNX`.
-
-Functions and considerations:
-
-* `takeOrder()` - None
-* `redeem()` - None
-
 ## UniswapV2ExchangeAdapter
 
 Integrates with UniswapV2 for trading.
