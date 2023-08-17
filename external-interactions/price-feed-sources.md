@@ -75,23 +75,11 @@ Considerations:
 
 * uses `ERC4626.convertToAssets()` for pricing
 
-## FiduPriceFeed
-
-Provides a value for Goldfinch's FIDU token.
-
-Considerations:
-
-Goldfinch's withdrawal fee is included in the calculations.
-
 ## IdlePriceFeed
 
 Provides a value for each `IdleToken` to its underlying asset.
 
 Considerations: Does not take into account user-specific fees (i.e., relative to the vault) that are charged upon redeeming `IdleToken` for its underlying
-
-## PoolTogetherV4PriceFeed
-
-Prices PoolTogether `ptTokens` , which are pegged 1:1 with the value of their underlying, e.g., 1 `ptUSDC` is equal to 1 `USDC` .
 
 ## RevertingPriceFeed
 

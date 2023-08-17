@@ -158,21 +158,6 @@ Functions and considerations:
 * `takeMultipleOrders()` - None
 * `takeOrder()` - None
 
-## PoolTogetherV4Adapter
-
-Integrates with PoolTogether (v4).
-
-Functions and considerations:
-
-* `claimRewards()` - none
-* `lend()` - fund is entered in the PoolTogether drawings for the lent token, and must actively claim winnings. This must be monitored by managers, off-chain.
-* `redeem()` - none
-
-Notes:
-
-* Claiming accrued winnings can also be accomplished via `claimRewards()` (required if the manager wants to use the gas relayer for the tx cost), or via the PoolTogether PrizeDistributor directly (open to any caller for any winner).
-* When transferring ptTokens, the recipient's received amount is only entered into the lottery if they have previously specified a delegate (either themself or a third party). If the recipient has not yet specified a delegate, they must do so in a separate call via PoolTogether contracts. This should be taken into consideration by fund managers and investors, as investors that receive ptTokens from a shares redemption will need to choose a delegate to be entered into drawings, if they have not yet done so.
-
 ## SynthetixAdapter
 
 \[Deprecated. Can currently only be used to purge already-held synths into sUSD]
