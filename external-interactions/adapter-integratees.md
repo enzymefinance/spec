@@ -220,14 +220,6 @@ Functions and considerations:
 
 Note that while all Yearn vault v2 instances adhere to the same interface, each individual instance uses one of many particular versioned implementations (see `v2.registry.ychad.eth`). Only the adapter interactions with expected behaviors of interface functions can be realistically audited.
 
-## ZeroExV2Adapter
-
-Integrates with the 0x Protocol v2. This adapter limits orders to makers approved by the Enzyme Council.
-
-Functions and considerations:
-
-* `takeOrder()` -  none
-
 ## ZeroExV4Adapter
 
 Integrates with the 0x Protocol v4.
