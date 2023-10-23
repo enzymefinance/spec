@@ -20,6 +20,15 @@ Functions and considerations:
 * `lend()` - None
 * `redeem()` - None
 
+## ArrakisV2Adapter
+
+Integrates with Arrakis v2 vaults (tokenized and automated Uniswap v3 positions).
+
+Functions and considerations:
+
+* `lend()` - None
+* `redeem()` - None
+
 ## AuraBalancerV2LpStakingAdapter
 
 Integrates with Aura to stake and unstake Balancer Pool Tokens (BPTs), via wrapped Aura staking tokens.

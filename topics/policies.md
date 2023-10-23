@@ -147,6 +147,14 @@ E.g., allow only WETH and MLN
 
 E.g., At least 1 WETH and 10 MLN must remain in the vault after each redemption
 
+### NoDepegOnRedeemSharesForSpecificAssetsPolicy
+
+* Hook: `RedeemSharesForSpecificAssets`
+* Disableable: Yes
+* Updatable: Yes
+* Description: Manager defines a list of assets with acceptable price deviations from a specified value (e.g., USDC can deviate up-to 1% from $1)
+* Intended purpose: Do not allow specific-asset redemptions during a depeg event, when share price would be artificially high for LP tokens whose pricing assumes adherence to the pool invariant (e.g., USD)
+
 ###
 
 ###

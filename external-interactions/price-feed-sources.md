@@ -2,6 +2,10 @@
 
 Just as adapters and external positions interact with external "integratees," so do price feeds interact with sources that provide them with the data they need to provide rates.
 
+## ArrakisV2PriceFeed
+
+Converts an amount of an Arrakis v2 vault token into its equivalent underlying token balances.
+
 ## AuraBalancerV2LpStakingWrapperPriceFeed
 
 Converts an amount of a [`AuraBalancerV2LpStakingWrapper`](../peripheral-features/staking-wrappers.md#aurabalancerv2lpstakingwrapper) token into its underlying Balancer Pool Token (rate is always 1:1)
