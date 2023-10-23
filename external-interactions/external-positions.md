@@ -87,6 +87,16 @@ Actions and considerations:
 * `UnpausePositionValue` - None
 * As with ETH staking integrations in general, slashing leads to temporarily over-pricing a validator's value (due to the delay of broadcasting a slashing event to the execution layer, and the uncertainty of slashed amount). This would lead to temporarily over-priced Enzyme vault shares. An asset manager could use the `PausePositionValue` action as a mitigation.
 
+### LidoWithdrawalsPosition
+
+Handles un-staking ETH from Lido stETH.
+
+Actions and considerations:
+
+* `RequestWithdrawals` - None
+* `ClaimWithdrawals` - ETH is received by the vault as WETH
+* Position pricing: While a withdrawal request is pending, the value of the position is the stETH amount in the request (i.e., not yet the equivalent ETH value, which can technically not be 1:1)
+
 ### LiquityDebtPosition
 
 Handles borrowing LUSD using ETH as collateral on Liquity.
