@@ -83,7 +83,7 @@ Note that `COMP` is also claimable natively on Compound on behalf of the fund (b
 
 ## ConvexCurveLpStakingAdapter
 
-Integrates with [`ConvexCurveLpStakingWrapper`](../peripheral-features/staking-wrappers.md#convexcurvelpstakingwrapper) deployments to facilitate the staking of Curve LP tokens to Convex Finance.
+Integrates with [`ConvexCurveLpStakingWrapper`](broken-reference) deployments to facilitate the staking of Curve LP tokens to Convex Finance.
 
 Also provides convenience functions to LP on Curve and then stake on Convex in the same action, i.e., `lendAndStake()` and `lendAndRedeem()`. These actions use the same logic for LP'ing as the [`CurveLiquidityAdapter`](adapter-integratees.md#curveliquidityadapter-1) and thus have the same requirements and considerations.
 

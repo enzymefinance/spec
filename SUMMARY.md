@@ -39,4 +39,3 @@
 ## Peripheral Features
 
 * [Shares Wrappers](peripheral-features/shares-wrappers.md)
-* [Staking Wrappers](peripheral-features/staking-wrappers.md)

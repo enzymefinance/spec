@@ -8,7 +8,7 @@ Converts an amount of an Arrakis v2 vault token into its equivalent underlying t
 
 ## AuraBalancerV2LpStakingWrapperPriceFeed
 
-Converts an amount of a [`AuraBalancerV2LpStakingWrapper`](../peripheral-features/staking-wrappers.md#aurabalancerv2lpstakingwrapper) token into its underlying Balancer Pool Token (rate is always 1:1)
+Converts an amount of a [`AuraBalancerV2LpStakingWrapper`](broken-reference) token into its underlying Balancer Pool Token (rate is always 1:1)
 
 Mainnet contracts:
 
@@ -53,7 +53,7 @@ We query the cached rate instead of the live rate for gas savings. cTokens rates
 
 ## ConvexCurveLpStakingWrapperPriceFeed
 
-Converts an amount of a [`ConvexCurveLpStakingWrapper`](../peripheral-features/staking-wrappers.md#convexcurvelpstakingwrapper) token into its underlying Curve LP token (rate is always 1:1)
+Converts an amount of a [`ConvexCurveLpStakingWrapper`](broken-reference) token into its underlying Curve LP token (rate is always 1:1)
 
 ## CurvePriceFeed
 
