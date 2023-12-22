@@ -154,6 +154,20 @@ Actions and considerations:
 * `ClaimExitedAssets` - If only partially claimable, a new exit request is created for the remaining requested amount
 * As with ETH staking integrations in general, slashing leads to temporarily over-pricing a validator's value (due to the delay of broadcasting a slashing event to the execution layer, and the uncertainty of slashed amount). This would lead to temporarily over-priced Enzyme vault shares.
 
+### TermFinanceV1LendingPosition
+
+Handles lending via Term Finance auctions.
+
+Actions and considerations:
+
+* `AddOrUpdateOffers` - None
+* `RemoveOffers` - None
+* `Redeem` - None
+* `Sweep` - None
+* Pricing considerations:
+  * Assumes that the full expected loan value will be repaid at maturity, i.e., does not consider under-collateralization or failure to repay, even post-maturity.
+  * After an auction ends and until loan maturity, lent value is not redeemable. During this time, value is estimated based on simple interest accrual, pro-rata for the time elapsed.
+
 ### TheGraphDelegationPosition
 
 Handles delegating $GRT to indexers on The Graph.
