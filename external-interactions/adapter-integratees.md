@@ -29,21 +29,6 @@ Functions and considerations:
 * `lend()` - None
 * `redeem()` - None
 
-## AuraBalancerV2LpStakingAdapter
-
-Integrates with Aura to stake and unstake Balancer Pool Tokens (BPTs), via wrapped Aura staking tokens.
-
-Can be used for combining Balancer LP/swap and Aura staking actions.
-
-Functions and considerations:
-
-* `lendAndStake()` - None
-* `takeOrder()` - Uses Balancer Vault's `batchSwap()`. Use for LPing with nested composable stable pools.
-* `unstake()` - None
-* `unstakeAndRedeem()` - None
-
-Above action implementations are the same as [#balancerv2liquidityadapter](adapter-integratees.md#balancerv2liquidityadapter "mention")
-
 ## BalancerV2LiquidityAdapter
 
 Integrates with Balancer v2 to swap, and to lend/redeem/stake/unstake Balancer Pool Tokens (BPTs).
@@ -80,22 +65,6 @@ Functions and considerations:
 * `claimRewards()` - None
 
 Note that `COMP` is also claimable natively on Compound on behalf of the fund (by any user).
-
-## ConvexCurveLpStakingAdapter
-
-Integrates with [`ConvexCurveLpStakingWrapper`](broken-reference) deployments to facilitate the staking of Curve LP tokens to Convex Finance.
-
-Also provides convenience functions to LP on Curve and then stake on Convex in the same action, i.e., `lendAndStake()` and `lendAndRedeem()`. These actions use the same logic for LP'ing as the [`CurveLiquidityAdapter`](adapter-integratees.md#curveliquidityadapter-1) and thus have the same requirements and considerations.
-
-Functions and considerations:
-
-* `claimRewards()` - none
-* `stake()` - fund starts accruing $CVX, $CRV and pool rewards (if applicable) after action
-* `unstake()` - none
-* `lendAndStake()` - fund starts accruing $CVX, $CRV and pool rewards (if applicable) after action
-* `unstakeAndRedeem()` - redemption can be made for either an equal balance of underlying pool tokens (relative to pool proportions), or for a single asset in the pool
-
-Claiming accrued rewards on behalf of any fund can also be accomplished outside of the adapter via the `ConvexCurveLpStakingWrapper` .
 
 ## CurveExchangeAdapter
 

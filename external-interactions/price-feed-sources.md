@@ -6,14 +6,6 @@ Just as adapters and external positions interact with external "integratees," so
 
 Converts an amount of an Arrakis v2 vault token into its equivalent underlying token balances.
 
-## AuraBalancerV2LpStakingWrapperPriceFeed
-
-Converts an amount of a [`AuraBalancerV2LpStakingWrapper`](broken-reference) token into its underlying Balancer Pool Token (rate is always 1:1)
-
-Mainnet contracts:
-
-* each wrapper contract
-
 ## BalancerV2GaugeTokenPriceFeed
 
 Converts an amount of a gauge-staked Balancer Pool Token (BPT) into its underlying BPT (rate is always 1:1)
@@ -50,10 +42,6 @@ Queries each Compound Token (cToken) directly for its rate.
 Considerations:
 
 We query the cached rate instead of the live rate for gas savings. cTokens rates change negligibly for long periods of time.
-
-## ConvexCurveLpStakingWrapperPriceFeed
-
-Converts an amount of a [`ConvexCurveLpStakingWrapper`](broken-reference) token into its underlying Curve LP token (rate is always 1:1)
 
 ## CurvePriceFeed
 
