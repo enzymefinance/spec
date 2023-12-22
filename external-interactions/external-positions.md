@@ -120,7 +120,6 @@ Actions and considerations:
 * `LendV2` - None
 * `RedeemV2` - None
 * `RequestRedeemV2` - None
-* `ClaimRewardsV1` - (legacy action for unclaimed MPL rewards)
 
 ### SolvV2BondBuyerPosition
 
