@@ -1,13 +1,5 @@
 # Performance Fee
 
-Performance Fees for pre-Sulu releases include the concept of a “crystallisation period”. While this concept is important in traditional finance, it is also complicated and gas-expensive to properly implement on-chain.
-
-By removing the concept of “crystallisation period”, we can greatly simplify the implementation of the performance fee in the protocol.
-
-This also implies that the performance fee is paid out at any time one of the triggering events happens.&#x20;
-
-Without a "crystallisation period" the manager can potentially earn more performance fees through continuous accrual instead of quarterly or yearly accrual. Managers should therefore set the rate for the new simplified performance fee lower than the rate of the previously used performance fee.
-
 ### Principles
 
 * Performance fee is paid after a period of constant share supply. Share supply changes on the following actions:
@@ -28,3 +20,9 @@ Without a "crystallisation period" the manager can potentially earn more perform
 * Value of performance fee during period $$F_i = W_i \cdot x%$$, where $$x$$is the performance fee percentage
 * Performance fee shares (dilute existing shares): $$f_i = \frac{F_i \cdot TS_i}{GAV_i - F_i}$$
 * Calculate share price (after all fees have been minted or burnt): $$g_i^\prime = GAV_i / TS_i^\prime$$ where $$TS^\prime_i$$ is the new total supply after all fees have been settled. If $$g^\prime_i > hwm$$ (i.e. also $$W_i$$ and $$F_i$$ will be larger than zero), then update storage $$hwm = g^\prime_i$$.
+
+
+
+{% hint style="info" %}
+On Sulu(v4) we removed the crystallisation period. Without a "crystallisation period", the manager can potentially earn more performance fees through continuous accrual instead of quarterly or yearly accrual. Managers should, therefore, set the rate for the new simplified performance fee lower than the rate of the previously used performance fee.
+{% endhint %}
