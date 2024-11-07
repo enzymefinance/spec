@@ -136,12 +136,12 @@ See "Protocol Fees" section.
 
 ### ValueInterpreter
 
-The `ValueInterpreter` is the single point of aggregation of various "price feeds" (an additional type of "plugin" that is only managed by the Enzyme Council) that are used to calculate the value of one or many input asset amounts in terms of an output asset.
+The `ValueInterpreter` is the single point of aggregation of various "price feeds" (an additional type of "plugin" that is only managed by the Enzyme Technical Committee) that are used to calculate the value of one or many input asset amounts in terms of an output asset.
 
 There are two categories of assets in this release:
 
-* "primitives" - assets for which we have direct rates via Chainlink aggregators that can be used to convert one primitive to any other (e.g., WETH, ZRX, etc)
-* "derivatives" - assets for which we only have rates in terms of underlying assets (e.g., Chai, Compound cTokens, Uniswap pool tokens, etc)
+* "primitives" - assets for which we have rates via Chainlink-like aggregators that are either quoted in ETH or USD
+* "derivatives" - assets for which we have rates via custom price feeds that are quoted in one or multiple underlying assets (e.g., Compound cTokens, Uniswap v2 pool tokens, etc)
 
 The `ValueInterpreter` determines whether an asset is a primitive or derivative, and executes logic to use corresponding price feeds to determine the value in the output asset.
 

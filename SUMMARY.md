@@ -19,10 +19,10 @@
 * [Fund Lifecycle](topics/creation-migration-reconfiguration.md)
 * [Holdings and Shares](topics/fund-holdings.md)
 * [External Positions](topics/external-positions.md)
+* [Position Pricing](topics/position-pricing.md)
 * [Protocol Access](topics/protocol-fee.md)
 * [Gas Relayer](topics/gas-relayer.md)
 * [Policies](topics/policies.md)
-* [Asset pricing](topics/asset-pricing.md)
 * [Known Risks & Mitigations](topics/known-risks-and-mitigations.md)
 
 ## Fee formulas
