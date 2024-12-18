@@ -42,6 +42,15 @@ Actions and considerations:
 * `RepayBorrow` - None
 * `SetEMode` - Used to toggle eMode (see Aave docs)
 * `SetUseReserveAsCollateral` - Used to toggle isolation mode (see Aave docs)
+* `ClaimRewards`- None
+
+### AlicePosition
+
+Manages orders on Alice (LMAX).
+
+### ArbitraryLoanPosition
+
+Manages loans from the vault to 3rd parties, with rules and position valuation determined by an attached "accounting module."
 
 ### CompoundDebtPosition
 
@@ -72,6 +81,10 @@ Actions and considerations:
 * `Withdraw` - Stops accrual of cvxCRV rewards and any extra rewards
 * `ClaimRewards` - None
 * `Delegate` - None
+
+### GMXV2LeveragePosition
+
+Manages positions on GMX v2.
 
 ### KilnStakingPosition
 
@@ -121,14 +134,20 @@ Actions and considerations:
 * `RedeemV2` - None
 * `RequestRedeemV2` - None
 
+### MorphoBluePosition
+
+Handles lending and borrowing on Morpho Blue.
+
+### PendleV2Position
+
+Handles swapping and liquidity provision on Pendle v2.
+
 ### StaderWithdrawalsPosition
 
 Handles un-staking ETH from Stader ETHx.
 
-Actions and considerations:
+Considerations:
 
-* `RequestWithdrawal` - None
-* `ClaimWithdrawal` - ETH is received by the vault as WETH
 * Position pricing:&#x20;
   1. Request pending: the original Stader ETHx amount requested for withdrawal
   2. Request finalized: the finalized ETH amount to be received upon claim
