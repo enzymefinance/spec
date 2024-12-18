@@ -121,6 +121,18 @@ Actions and considerations:
 * `RedeemV2` - None
 * `RequestRedeemV2` - None
 
+### StaderWithdrawalsPosition
+
+Handles un-staking ETH from Stader ETHx.
+
+Actions and considerations:
+
+* `RequestWithdrawal` - None
+* `ClaimWithdrawal` - ETH is received by the vault as WETH
+* Position pricing:&#x20;
+  1. Request pending: the original Stader ETHx amount requested for withdrawal
+  2. Request finalized: the finalized ETH amount to be received upon claim
+
 ### StakeWiseV3StakingPosition
 
 Handles staking ETH on the Beacon Chain via StakeWise v3 vaults
