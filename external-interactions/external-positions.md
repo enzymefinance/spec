@@ -121,27 +121,6 @@ Actions and considerations:
 * `RedeemV2` - None
 * `RequestRedeemV2` - None
 
-### SolvV2BondBuyerPosition
-
-Handles buying Solv v2 bonds at IVO (initial voucher offering) and claiming bond value at settlement.
-
-Actions and considerations:
-
-* `BuyOffering` - Once bought, any held voucher will result in an invalid (reverting) GAV/share price until that voucher's maturity
-* `Claim` - None
-
-### SolvV2BondIssuerPosition
-
-Handles issuing Solv v2 bonds at IVO (initial voucher offering) and settling bond value at settlement.
-
-Actions and considerations:
-
-* `CreateOffer` - Once created, any issued voucher will result in an invalid (reverting) GAV/share price until that voucher's maturity
-* `Reconcile` - None
-* `Refund` - None
-* `RemoveOffer` - None
-* `Withdraw` - None
-
 ### StakeWiseV3StakingPosition
 
 Handles staking ETH on the Beacon Chain via StakeWise v3 vaults

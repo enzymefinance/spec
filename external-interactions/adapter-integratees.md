@@ -20,15 +20,6 @@ Functions and considerations:
 * `lend()` - None
 * `redeem()` - None
 
-## ArrakisV2Adapter
-
-Integrates with Arrakis v2 vaults (tokenized and automated Uniswap v3 positions).
-
-Functions and considerations:
-
-* `lend()` - None
-* `redeem()` - None
-
 ## BalancerV2LiquidityAdapter
 
 Integrates with Balancer v2 to swap, and to lend/redeem/stake/unstake Balancer Pool Tokens (BPTs).
@@ -66,14 +57,6 @@ Functions and considerations:
 
 Note that `COMP` is also claimable natively on Compound on behalf of the fund (by any user).
 
-## CurveExchangeAdapter
-
-Integrates with Curve's universal interface for swapping between any assets in a given pool.
-
-Functions and considerations:
-
-* `takeOrder()` : none
-
 ## CurveLiquidityAdapter
 
 Integrates with Curve pools that adhere to Curve's [pool templates](https://github.com/curvefi/curve-contract/tree/master/contracts/pool-templates) to allow liquidity provision-related actions, including staking to tokenized liquidity gauges (i.e., `LiquidityGaugeV2` and later).
@@ -104,19 +87,6 @@ Functions and considerations:
 * `lend()` : calls `ERC4626.deposit()`
 * `redeem()`: calls `ERC4626.redeem()`
 * no further options for interacting are currently supported
-
-## IdleAdapter
-
-Integrates with the Idle Finance's `IdleToken` contracts using the functions available in V4 of its protocol.
-
-Functions and considerations:
-
-* `approveAssets()` - can only be used for rewards tokens that are assets in the Enzyme asset universe
-* `claimRewards()` - claimed rewards tokens are sent to the Vault, but are not reported as `incomingAssets`, and thus are not emitted in an event, not run through policy management, and are not added as tracked assets
-* `lend()` - none
-* `redeem()` - any call to redeem() will also claim all rewards tokens; these rewards tokens are sent to the vault, but are not reported as `incomingAssets`, and thus are not emitted in an event, not run through policy management, and are not added as tracked assets
-
-Unclaimed rewards transfer to the recipient during ERC20 transfer calls, rather than auto-checkpointing as other protocols do.
 
 ## OneInchV5Adapter
 

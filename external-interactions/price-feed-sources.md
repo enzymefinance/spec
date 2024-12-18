@@ -2,10 +2,6 @@
 
 Just as adapters and external positions interact with external "integratees," so do price feeds interact with sources that provide them with the data they need to provide rates.
 
-## ArrakisV2PriceFeed
-
-Converts an amount of an Arrakis v2 vault token into its equivalent underlying token balances.
-
 ## BalancerV2GaugeTokenPriceFeed
 
 Converts an amount of a gauge-staked Balancer Pool Token (BPT) into its underlying BPT (rate is always 1:1)
@@ -67,12 +63,6 @@ Considerations:
 
 * uses `ERC4626.convertToAssets()` for pricing
 
-## IdlePriceFeed
-
-Provides a value for each `IdleToken` to its underlying asset.
-
-Considerations: Does not take into account user-specific fees (i.e., relative to the vault) that are charged upon redeeming `IdleToken` for its underlying
-
 ## RevertingPriceFeed
 
 Immediately reverts upon any price lookup.
@@ -94,10 +84,6 @@ Uses a special pool manipulation-resistant formula that takes into consideration
 See also the sample implementation we based this on: [https://github.com/Uniswap/uniswap-v2-periphery/blob/267ba44471f3357071a2fe2573fe4da42d5ad969/contracts/libraries/UniswapV2LiquidityMathLibrary.sol](https://github.com/Uniswap/uniswap-v2-periphery/blob/267ba44471f3357071a2fe2573fe4da42d5ad969/contracts/libraries/UniswapV2LiquidityMathLibrary.sol)
 
 Considerations: Live prices
-
-## WstethPriceFeed
-
-Provides a value for wrapped Lido stETH (wstETH)
 
 ## YearnVaultV2PriceFeed
 
