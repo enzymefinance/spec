@@ -30,12 +30,6 @@
 * [ManagementFee](fee-formulas/managementfee.md)
 * [Performance Fee](fee-formulas/performance-fee.md)
 
-## External Interactions
-
-* [Adapters](external-interactions/adapter-integratees.md)
-* [External Positions](external-interactions/external-positions.md)
-* [Price Feeds](external-interactions/price-feed-sources.md)
-
 ## Peripheral Features
 
 * [Shares Wrappers](peripheral-features/shares-wrappers.md)

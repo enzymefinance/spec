@@ -15,7 +15,7 @@ All Enzyme funds use the same `ValueInterpreter` , which is maintained by the En
 
 **External positions** (e.g., CDPs, non-fungible LP) contain an internal price feed, which reports its holdings in terms of virtual managed (positive value) and debt (negative value) asset positions. Generally - e.g., when calculating a fund's share price, these managed and debt assets are then aggregated into a target quote asset via `ValueInterpreter`.
 
-See the [price feeds list](../external-interactions/price-feed-sources.md) section for the specific feeds used in `ValueInterpreter`, and the [external positions list](../external-interactions/external-positions.md) section for the available external position types, all of which have an internal pricing feed, as discussed above.
+See the [price feeds list](broken-reference) section for the specific feeds used in `ValueInterpreter`, and the [external positions list](broken-reference) section for the available external position types, all of which have an internal pricing feed, as discussed above.
 
 ## Pricing risk
 
@@ -39,11 +39,11 @@ The same would be true of a collateralized synthetic asset that became under col
 
 ### Example: Assets that rely on external protocol assumptions
 
-For example, the [`CurvePriceFeed`](../external-interactions/price-feed-sources.md#curvepricefeed) that is used for pricing staked and unstaked Curve pool tokens would become unstable should any of the assets in the pool lose its 1:1 peg with the pool invariant (which would lead to a "bank run" of sorts, imbalancing the Curve pool).
+For example, the [`CurvePriceFeed`](broken-reference) that is used for pricing staked and unstaked Curve pool tokens would become unstable should any of the assets in the pool lose its 1:1 peg with the pool invariant (which would lead to a "bank run" of sorts, imbalancing the Curve pool).
 
 ### Example: Assets that rely on external protocol security
 
-For example, the [YearnVaultV2PriceFeed](../external-interactions/price-feed-sources.md#yearnvaultv2pricefeed) that is used for pricing yVault tokens relies on its yVault contract correctly reporting its value in a way that cannot be manipulated by price oracle manipulation attacks.
+For example, the [YearnVaultV2PriceFeed](broken-reference) that is used for pricing yVault tokens relies on its yVault contract correctly reporting its value in a way that cannot be manipulated by price oracle manipulation attacks.
 
 ### Caution: Riskier price feeds
 

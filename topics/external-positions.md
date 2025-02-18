@@ -8,6 +8,14 @@ An "external position" is a type of fund holding introduced in v4 that:
 * cannot have value withdrawn during a shares redemption (investors in funds that use external positions should almost never redeem in-kind, as any value inside of external positions will effectively be forfeited)
 * is a "beacon" proxy contract that uses the library dictated by the fund's current release (e.g., Sulu)
 
+## External Position Types
+
+Each external position is associated with a "type" that is written to `ExternalPositionProxy.EXTERNAL_POSITION_TYPE` upon its deployment. This type (e.g., a Compound debt position) instructs the system as to which library and parser contracts to use with proxy interactions.
+
+A vault can have many active external positions of the same type.
+
+There are no globally-enforced limitations on the asset counts that can be managed within any external position.
+
 ## Persistent architecture
 
 An `ExternalPositionProxy` is deployed by a persistent `ExternalPositionFactory` , which serves as an enduring registry of external position "types" (e.g., Compound CDP) and all valid `ExternalPositionProxy` instances (i.e., those created via the factory).
