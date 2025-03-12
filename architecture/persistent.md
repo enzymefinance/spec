@@ -4,9 +4,9 @@
 
 ### Philosophy
 
-Enzyme has upgradable vaults, structured to give both managers and investors the opportunity to opt-in (managers) or opt-out (investors) of major updates.
+Enzyme has upgradable vaults, structured to require fund owners to opt-in (migrate) to subsequent major versions.
 
-For more on the philosophy and challenges of upgradability within the Enzyme Protocol, refer to this article: [https://medium.com/enzymefinance/fund-in-the-shell-e82c46a0a0fa](https://medium.com/enzymefinance/fund-in-the-shell-e82c46a0a0fa)
+\[Note: previously, the core contracts also gave investors a period during which to opt-out by redeeming shares before an upgrade is final. As vault owners are now considered trusted in core, this period has been eliminated, thus any opportunity to opt-out must be created peripherally.]
 
 ### Approach
 

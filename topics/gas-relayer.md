@@ -31,14 +31,7 @@ The main contracts involved are:
 
 ## Allowed calls
 
-Any account with a permissioned role (owner, migrator, or asset manager) on the fund can use the internal gas relayer architecture.
+Any account with a permissioned role (owner, migrator, or asset manager) on the fund can use the internal gas relayer architecture. Additionally, the fund owner can specify additional arbitrary users (e.g., the executors of deposit and redemption queues).
 
-All calls related to fund management that pass through the following contracts are allowed:
-
-* `ComptrollerProxy`
-* `VaultProxy`
-* `PolicyManager`&#x20;
-* `FundDeployer` (reconfiguration functions only; migration functions are not possible as they are called on a different release than the paymaster)
-
-Note: anybody can use an external "paymaster" to pay for relayed transactions, and there is intentionally support included to enable deposit and redeeming shares functions, while not allowing those particular calls in the protocol's "paymaster".
+Any calls by these users is allowed to be relayed. The fund owner is responsible for monitoring for any abuse.
 

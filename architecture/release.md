@@ -108,11 +108,7 @@ See "External Positions" section.
 
 Each of the Extensions above make use of plugins. The `IntegrationManager` uses "adapters", the `PolicyManager` uses "policies", and the `FeeManager` uses "fees", and the `ExternalPositionManager` uses "external positions."
 
-Arbitrary (third party) plugins are allowed for fees, policies, and integrations. Fund managers can decide whether or not to use third party plugins, and investors will be able to determine if fund configurations are safe for their trust threshold. A setup that only uses official plugins would entail:
-
-* No arbitrary policies that restrict investor actions (can only be added at fund setup)
-* No arbitrary fees (can only be added at fund setup)
-* No arbitrary adapters (unremovable policy will be provided with a registry of official, Council-verified adapters)
+Arbitrary (third party) plugins are allowed for fees, policies, and integrations. Fund owners can decide whether or not to use third party plugins, and investors will be able to determine if fund configurations are safe for their risk tolerance.
 
 ## Infrastructure
 

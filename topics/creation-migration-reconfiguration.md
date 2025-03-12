@@ -26,7 +26,7 @@ In order to create a new fund, CallerA (any account) can call `FundDeployer.crea
 ### **Migration to this release from a previous release**
 
 1. &#x20;MigratorA calls `FundDeployer.createMigrationRequest()` , which deploys a new `ComptrollerProxy` instance, setting the caller-provided core and extension config, and the `VaultProxy` that will be migrated.
-2. MigratorA waits for the `migrationTimelock` defined on the `Dispatcher` to pass.
+2. MigratorA waits for the `migrationTimelock` defined on the `Dispatcher` to pass. \[NOTE: This is no longer used and is set to \`0\`]
 3. MigratorA calls `FundDeployer.executeMigration()` , which calls up to `Dispatcher.executeMigration()`
 4. The `Dispatcher` updates the `VaultProxy` 's `VaultLib` and assigns the newly-created `ComptrollerProxy` as its `accessor` .
 5. The `FundDeployer` calls `ComptrollerProxy.activate()` to give extensions a final chance to validate and update state.
@@ -46,10 +46,10 @@ This release implements only the `invokeMigrationOutHook` that runs immediately 
 
 A reconfiguration is very similar to a migration (on both a high and low level) in that a new `ComptrollerProxy` is created to replace the old `ComptrollerProxy` , within the same release. It can even be called an "intra-release migration."
 
-The difference is mostly that rather than passing calls up to an authoritative `Dispatcher`, the `FundDeployer` itself stores a `reconfigurationRequest` and defines a local`reconfigurationTimelock` .
+The difference is mostly that rather than passing calls up to an authoritative `Dispatcher`, the `FundDeployer` itself stores a `reconfigurationRequest` and defines a local`reconfigurationTimelock` \[NOTE: This is no longer used and is set to \`0\`].
 
 1. &#x20;MigratorA calls `FundDeployer.createReconfigurationRequest()` , which deploys a new `ComptrollerProxy` instance, setting the caller-provided core and extension config, and the `VaultProxy` that will be moved.
-2. MigratorA waits for the `reconfigurationTimelock` to pass.
+2. MigratorA waits for the `reconfigurationTimelock` to pass. \[NOTE: This is no longer used and is set to \`0\`]
 3. MigratorA calls `FundDeployer.executeReconfiguration()` , which assigns the newly-created `ComptrollerProxy` as its `accessor` .
 4. The `FundDeployer` deactivates the old `ComptrollerProxy` as described in "Migration from this release to a new release".
 5. The `FundDeployer` calls `ComptrollerProxy.activate()` to give extensions a final chance to validate and update state.
