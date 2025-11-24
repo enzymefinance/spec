@@ -24,6 +24,7 @@
 * [Gas Relayer](topics/gas-relayer.md)
 * [Policies](topics/policies.md)
 * [Known Risks & Mitigations](topics/known-risks-and-mitigations.md)
+* [Known Bugs](topics/known-bugs.md)
 
 ## Fee formulas
 

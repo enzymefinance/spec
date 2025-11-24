@@ -22,8 +22,6 @@ To optimise the ease of protocol access and of passively collecting $MLN, this r
 
 Protocol shares are minted at an inflated rate (e.g., 50 bps) above the effective target access rate (e.g., 25 bps). Funds can access the protocol with $MLN to pay the target rate and avoid being penalised.
 
-A core configuration option is also provided that allows funds to automatically access protocol fee shares whenever they are collected. If `setAutoProtocolFeeSharesBuyback()` is toggled on in the fund's `ComptrollerProxy`, then it will attempt to use the $MLN available in the the `VaultProxy` to atomically access the full amount of protocol fee shares collected (during deposit and shares redemption actions).
-
 ## Contracts
 
 In order to implement this mechanism, two decoupled contracts with different lifespans and separate concerns are used in tandem:
