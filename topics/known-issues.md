@@ -1,4 +1,6 @@
-# Known Bugs
+# Known Issues
+
+These are issues that have been reported by whitehats, auditors, or internal team members, for which no fix will be made. All issues have been assessed for severity in consultation with our regular auditors and technical committee.
 
 ## Incorrect share price for depositors and redeemers if "auto-buyback of protocol fee shares" is used
 
