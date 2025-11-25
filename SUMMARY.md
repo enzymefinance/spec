@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Intro](README.md)
+* [Smart Contracts Adresses](https://github.com/enzymefinance/sdk/tree/main/packages/environment/src/deployments)
 * [GitHub repo](github-repo.md)
 
 ## Architecture
